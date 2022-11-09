@@ -39,30 +39,30 @@ import e from './e.jpg'
     })
   return (
     <div>
-      <div class="slideshow-container">
+      <div className="slideshow-container">
 
-<div class="mySlides fade777">
-  <div class="numbertext">1 / 3</div>
+<div className="mySlides fade777">
+  <div className="numbertext">1 / 3</div>
   <img className="img333" src={a} style={{width:'100%' }}/>
-  <div class="text">Contact us</div>
+  <div className="text">Contact us</div>
 </div>
 
  
-<div class="mySlides fade777">
-  <div class="numbertext">3 / 3</div>
+<div className="mySlides fade777">
+  <div className="numbertext">3 / 3</div>
   <img className="img333" src={a} style={{width:'103%'}}/>
-  <div class="text"> </div>
+  <div className="text"> </div>
 </div>
- <a class="prev"  >❮</a>
-<a class="next"  >❯</a>
+ <a className="prev"  >❮</a>
+<a className="next"  >❯</a>
 
 </div>
 <br/>
 
 <div style={{textAlign:"center"}}>
-  <span class="dot"  ></span> 
-  <span class="dot"  ></span> 
-  <span class="dot"  ></span> 
+  <span className="dot"  ></span> 
+  <span className="dot"  ></span> 
+  <span className="dot"  ></span> 
 </div>  
 
 

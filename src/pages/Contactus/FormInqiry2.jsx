@@ -21,7 +21,7 @@ function FormInquiry2() {
     <div className="Formcontainer">
       <h3 className="h3tag">Send Message</h3>
 
-      <div class="container156">
+      <div className="container156">
       <Formik
        initialValues={{ email: '', name: '' }}
        validate={values => {
@@ -171,7 +171,7 @@ function FormInquiry2() {
        
   <div style={{position:"relative"}}>
 <label for="images" className="drop-title ">Drop Files Here</label>
-      <input  class="drop-container"   type="file" id="images" accept=".jpg , .pdf"   multiple  />
+      <input  className="drop-container"   type="file" id="images" accept=".jpg , .pdf"   multiple  />
 
   </div>
  

@@ -197,22 +197,22 @@ if(location.pathname!=="/"){
               <h2 style={{ textAlign: "center" }} className="welcome7">
                 welcome
               </h2>
-              <div class="vl">
-                <span class="vl-innertext">or</span>
+              <div className="vl">
+                <span className="vl-innertext">or</span>
               </div>
               <div className="col">
-                <a href="#" class="fb btn">
+                <a href="#" className="fb btn">
                   <FontAwesomeIcon className="socialicon13" icon={faFacebook} />
                   Login with Facebook
                 </a>
 
-                <a href="#" class="google btn">
+                <a href="#" className="google btn">
                   {" "}
                   <FontAwesomeIcon className="socialicon13" icon={faYoutube} />
                   Login with Google+
                 </a>
               </div>
-              <div class="col">
+              <div className="col">
                 <hr className="hr7" />
                 <input className="input555"
                   type="text"
@@ -230,13 +230,13 @@ if(location.pathname!=="/"){
               </div>
             </div>
           </form>
-          <div class="bottom-container">
-            <div class="col7">
+          <div className="bottom-container">
+            <div className="col7">
               <a className="sp7" href="">
                 Sign up
               </a>
             </div>
-            <div class="col7">
+            <div className="col7">
               <a className="sp7" href="">
                 Forgot password?
               </a>
@@ -258,26 +258,26 @@ if(location.pathname!=="/"){
             }}
           />
           <form>
-            <div class="row">
+            <div className="row">
               <h2 style={{ textAlign: "center" }} className="welcome7">
                 welcome
               </h2>
-              <div class="vl">
-                <span class="vl-innertext">or</span>
+              <div className="vl">
+                <span className="vl-innertext">or</span>
               </div>
-              <div class="col">
-                <a href="#" class="fb btn">
+              <div className="col">
+                <a href="#" className="fb btn">
                   <FontAwesomeIcon className="socialicon13" icon={faFacebook} />
                   Login with Facebook
                 </a>
 
-                <a href="#" class="google btn">
+                <a href="#" className="google btn">
                   {" "}
                   <FontAwesomeIcon className="socialicon13" icon={faYoutube} />
                   Login with Google+
                 </a>
               </div>
-              <div class="col">
+              <div className="col">
                 <hr className="hr7" />
                 <input
                   type="text"
@@ -295,13 +295,13 @@ if(location.pathname!=="/"){
               </div>
             </div>
           </form>
-          <div class="bottom-container">
-            <div class="col7">
+          <div className="bottom-container">
+            <div className="col7">
               <a className="sp7" href="">
                 Sign up
               </a>
             </div>
-            <div class="col7">
+            <div className="col7">
               <a className="sp7" href="">
                 Forgot password?
               </a>

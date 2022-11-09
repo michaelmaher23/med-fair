@@ -24,13 +24,13 @@ function SideNav() {
   });
 
   return (
-    <div>          <span class="nav-section-title">Medical Media</span>
+    <div>          <span className="nav-section-title">Medical Media</span>
 
-      <ul class="sidebar-menu">
+      <ul className="sidebar-menu">
         {" "}
-        <li class="have-children">
+        <li className="have-children">
           <a href="#" className="ae">
-            <span class="fa fa-flag"></span>Medical Network
+            <span className="fa fa-flag"></span>Medical Network
           </a>
           <ul>
             <li>
@@ -52,7 +52,7 @@ function SideNav() {
         </li>
         <li>
         </li>
-        <li class="have-children">
+        <li className="have-children">
           <a href="#" className="ae">
             Home
           </a>
@@ -65,9 +65,9 @@ function SideNav() {
             </li>
           </ul>
         </li>
-        <li class="have-children">
+        <li className="have-children">
           <a href="#" className="ae">
-            <span class="fa fa-tags"></span>Create
+            <span className="fa fa-tags"></span>Create
           </a>
           <ul>
             <li>
@@ -78,9 +78,9 @@ function SideNav() {
             </li>
           </ul>
         </li>
-        <li class="have-children">
+        <li className="have-children">
           <a href="#" className="ae">
-            <span class="fa fa-trophy"></span>About
+            <span className="fa fa-trophy"></span>About
           </a>
           <ul><p>
             ddd</p></ul>

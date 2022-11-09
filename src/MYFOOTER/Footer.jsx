@@ -26,7 +26,7 @@ function Footer() {
             Providing comprehensive and professional wellness videos in a safe
             community, Discover with us another levels of innovations.
           </p>
-          <div class="social229">
+          <div className="social229">
             <div>
               <FontAwesomeIcon icon={faEnvelope} /> <span> Email </span>
               <p>mikaelmaaher2023@gmail.com</p>
@@ -38,7 +38,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div class="column29 links29">
+        <div className="column29 links29">
           <h3 className="h329">
             {" "}
             <FontAwesomeIcon icon={faTv} /> Watch
@@ -59,7 +59,7 @@ function Footer() {
           </ul>
         </div>
 
-        <div class="column29 links29">
+        <div className="column29 links29">
           <h3 className="h329">Info</h3>
           <ul className="ul29">
             <li>
@@ -77,7 +77,7 @@ function Footer() {
           </ul>
         </div>
 
-        <div class="column29 subscribe29">
+        <div className="column29 subscribe29">
           <h3 className="h329">Get Our News .</h3>
           <div>
             <input
@@ -87,7 +87,7 @@ function Footer() {
             />
             <button className="button29">Subscribe</button>
           </div>
-          <div class="social29">
+          <div className="social29">
             <FontAwesomeIcon icon={faSquareFacebook} />
             <FontAwesomeIcon icon={faSquareYoutube} />
             <FontAwesomeIcon icon={faSquareTwitter} />
@@ -96,8 +96,8 @@ function Footer() {
         </div>
       </div>
 
-      <div class="row29 copyright29">
-        <div class="footer-menu29">
+      <div className="row29 copyright29">
+        <div className="footer-menu29">
           <a href="">Home</a>
           <a href="">Products</a>
           <a href="">News</a>
