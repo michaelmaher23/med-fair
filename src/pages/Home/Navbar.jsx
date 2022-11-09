@@ -22,11 +22,7 @@ import Video from "../../Video/Video";
 import VideoTexts from "../../VideoTexts.jsx/VideoTexts";
 import VideoComponent from "../../VideoTexts.jsx/VideoComponent";
 function Navbar() {
-  useEffect(() => {
-    setTimeout(() => {
-      document.querySelector("video").playbackRate = 0.95;
-     }, 700);
-  }, []);
+ 
   const [show, SetShow] = useState(true);
   const [show3, SetShow3] = useState(true);
   const [show2, SetShow2] = useState(false);

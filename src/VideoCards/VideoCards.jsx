@@ -5,7 +5,7 @@ function VideoCards() {
   return (
     <div className="myvideocardscontainer">
       {[...Array(20)].map((i, k) => (
-        <VideoCard />
+        <VideoCard key={k}/>
       ))}
     </div>
   );

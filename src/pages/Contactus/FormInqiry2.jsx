@@ -57,7 +57,7 @@ function FormInquiry2() {
         <form>
           <div className="cont2elmnts">
             <div>
-              <label for="fname">Name</label>
+              <label htmlFor="fname">Name</label>
               <div className="myinput">
                 <FontAwesomeIcon icon={faUser} />
                 <input
@@ -69,13 +69,13 @@ function FormInquiry2() {
 
 
                   type="text"
-                  id="fname"
+           
                    placeholder="Your name.."
                 />
               </div>
             </div>
             <div>
-              <label for="phone"  >Phone number:</label>
+              <label htmlFor="phone"  >Phone number:</label>
               <div className="myinput">
                 <FontAwesomeIcon icon={faMobileAlt} />
 
@@ -97,19 +97,19 @@ function FormInquiry2() {
 
           <div className="cont2elmnts">
             <div>
-              <label for="fname">Company</label>
+              <label htmlFor="fname">Company</label>
               <div className="myinput">
                 <FontAwesomeIcon icon={faBuilding} />
                 <input
                   type="text"
-                  id="fname"
+                 
                   name="firstname"
                   placeholder="Organization"
                 />
               </div>
             </div>
             <div>
-              <label for="country">Country</label>
+              <label htmlFor="country">Country</label>
 
               <div className="myinput">
                 <FontAwesomeIcon icon={faLocationDot} />
@@ -117,7 +117,7 @@ function FormInquiry2() {
                 <option  className="option789" value="Egypt">{"Egypt"} </option>
                 {Countries.map((c,k)=>{
                   return (
-                          <option className="option789" value={c["name"]}> {c["name"]}</option>
+                          <option key={k} className="option789" value={c["name"]}> {c["name"]}</option>
                   )
                 })}
             
@@ -126,7 +126,7 @@ function FormInquiry2() {
             </div>
           </div>
 
-          <label for="fname">Email</label>
+          <label htmlFor="fname">Email</label>
           <div className="myinput">
             <FontAwesomeIcon icon={faEnvelope} />
             <input
@@ -138,7 +138,7 @@ function FormInquiry2() {
 
 
          
-              id="fname"
+           
             
               placeholder=" Email.."
             />
@@ -146,18 +146,18 @@ function FormInquiry2() {
 
           </div>   
              <ErrorMessage name="email" component="div" />
-          <label for="fname">Confirm Email</label>
+          <label htmlFor="fname">Confirm Email</label>
           <div className="myinput">
             <FontAwesomeIcon icon={faEnvelope} />
             <input
               type="text"
-              id="fname"
+            
               name="firstname"
               placeholder="Confirm Email.."
             />
           </div>
 
-          <label for="subject">Subject</label>
+          <label htmlFor="subject">Subject</label>
           <div className="myinput">
             <FontAwesomeIcon icon={faComments} style={{alignSelf:"flex-start"}}/>
             <textarea
@@ -170,7 +170,7 @@ function FormInquiry2() {
           
        
   <div style={{position:"relative"}}>
-<label for="images" className="drop-title ">Drop Files Here</label>
+<label htmlFor="images" className="drop-title ">Drop Files Here</label>
       <input  className="drop-container"   type="file" id="images" accept=".jpg , .pdf"   multiple  />
 
   </div>
@@ -179,7 +179,7 @@ function FormInquiry2() {
 <div className="check777">
          
             <input type="checkbox"    id="vehicle3" name="vehicle3" value="Boat"/>
-<label for="vehicle3"> Let me subscribe and receive news letters weekly.</label>
+<label htmlFor="vehicle3"> Let me subscribe and receive news letters weekly.</label>
           </div>
 
 
