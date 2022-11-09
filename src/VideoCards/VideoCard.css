@@ -1,0 +1,95 @@
+.myvideocardscontainer {
+  width: 94vw;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cardcontainer29 {
+  width: 22%;
+  border-radius: 7px;
+  margin: auto;
+  margin-bottom: 2rem;
+  transition: all 0.2s linear;
+}
+.cardcontainer29:hover {
+  border-radius: 7px;
+  margin: auto;
+  margin-bottom: 2rem;
+  transform: translateY(3px);
+}
+.cardimagecontainer29 {
+  height: 8.5rem;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+
+  width: 100%;
+}
+
+.cardimage29 {
+  height: 100%;
+  display: block;
+  width: 100%;
+}
+.cardimagespan29 {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 6;
+  color: wheat;
+}
+.flexcategrank {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.categ {
+}
+.categspan {
+}
+.rank {
+}
+.rankp {
+}
+.mytitle29 {
+    width: 100%;
+ }
+.mytitleheading {
+   width: 100%;
+   white-space:unset;
+
+   font-size: 13px;
+
+
+ }
+.icondesc {
+}
+.icon29 {
+}
+.desc29 {
+}
+.watch29 {
+}
+.watchlater {
+}
+
+@media (max-width: 800px) {
+  .cardcontainer29 {
+    width: 45%;
+    border-radius: 7px;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 650px) {
+  .cardcontainer29 {
+    width: 95%;
+    border-radius: 7px;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+}

@@ -1,0 +1,80 @@
+ul.sidebar-menu {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  list-style: none;
+  list-style-type: none;
+}
+
+.sidebar-menu li a {
+  background-color: #58574d;
+  padding: 20px 25px;
+  display: block;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.sidebar-menu li a:hover {
+  background-color: #52565d;
+  padding: 20px 25px;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+ 
+.active{
+}
+.have-children ul {
+  transition: all 1s linear;
+ overflow: hidden;
+ height: 0px;
+ 
+}
+li.have-children ul li a {
+  background-color: #3c3636;
+  padding-left: 62px;
+}
+li.have-children ul li a:hover {
+  color: #fff;
+  background-color: #52565d;
+  padding-left: 62px;
+}
+li.have-children,
+li {
+  position: relative;
+}
+.have-children span::after {
+  position: absolute;
+  right: 30px;
+  content: "\f054";
+  color: #fff;
+  transition: all 0.5s;
+}
+.cont {
+  visibility: hidden;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 10%;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: absolute;
+}
+.cont1 {
+  background-color: rgb(255, 255, 255);
+  opacity: 1;
+  border-left: 2px solid gold;
+  width: 93%;
+  position: absolute;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 30%;
+  overflow-y: scroll;
+  transition: all 0.1s ease;
+}

@@ -1,0 +1,77 @@
+.interCont{
+   
+  width: 100%;
+  padding: 0%;
+    margin: auto;
+}
+.span99{
+    font-family: "El Messiri", sans-serif;
+     line-height: 1.975rem;
+     font-size: 1.6rem;    
+     font-weight: bolder;
+    line-height: 28px;
+  
+    margin-bottom: 16px;
+ 
+     color: goldenrod;
+    display: flex;
+    align-items: center;
+}
+.p99{
+    font-family: "El Messiri", sans-serif;
+
+ 
+    font-size: 1.135rem;
+    font-style: normal;
+
+    
+     
+    margin: 0;
+    font-weight: 500;
+    color: rgb(144, 119, 57);
+ }
+.p299{
+    font-family: "El Messiri", sans-serif;
+
+    font-size: 1.1rem;
+    line-height: 1.33;
+    margin-top: 24px;
+ color:rgb(65, 58, 58);
+ }
+.ul999{
+    font-family: "El Messiri", sans-serif;
+
+ list-style: none;
+ font-size: 40px;
+ margin-left: 2rem;
+ margin-top: 1rem;
+
+}
+ 
+   
+.ul999 li{
+  position: relative;
+  line-height: 3rem;
+}
+ 
+ 
+.ul999 li::before{
+    content: "";
+    width: 2rem;
+    background-image: url("./kkk.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 2rem;
+    position: absolute;
+    top:.5rem;
+    left: -2.3rem;
+    z-index: 88;
+}
+@media (max-width:700px){
+    .interCont{
+   
+        width: 100%;
+        padding: 3vw;
+          margin: auto;
+      }
+}

@@ -1,0 +1,21 @@
+.myvideo {
+  width: 90%;
+  height: 575px;
+  display: block;
+  margin: auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  overflow: hidden;
+}
+@media (max-width: 700px) {
+  .myvideo {
+    width: 95%;
+    height: 37vh;
+    display: block;
+    margin: auto;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,78 @@
+.interCont2 {
+  width: 100%;
+  min-height: 360px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5rem;
+}
+.videoC2 {
+  overflow: hidden;
+  position: relative;
+  height: 270px;
+  width: 80%;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.image33 {
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  transition: all 0.6s linear;
+  border: none;
+  transform: scale(101%);
+}
+
+.wzx {
+  height: 4rem;
+  width: 4rem;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.588);
+  top: calc(50% - 2rem);
+  right: calc(50% - 2rem);
+  border-radius: 50%;
+  z-index: 77;
+}
+.videoC2:hover .image33 {
+  transform: scale(105%);
+}
+.videoC2:hover .wzx {
+  transform: scale(104%);
+  position: absolute;
+  z-index: 77;
+}
+.Data99 {
+  position: absolute;
+  background: linear-gradient(#ffffff00, #00000086);
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 8px;
+}
+.Data99 p {
+  font-family: "El Messiri", sans-serif;
+  color: rgb(255, 255, 255);
+}
+.Data99 span {
+  font-size: smaller;
+  font-family: "El Messiri", sans-serif;
+  color: rgb(255, 255, 255);
+}
+@media (max-width: 0960px) {
+  .interCont2 {
+    justify-content: space-around;
+    margin-top: 3rem;
+  }
+  .videoC2 {
+    height: 270px;
+    width: 95%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+}

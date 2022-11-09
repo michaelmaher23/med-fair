@@ -1,0 +1,155 @@
+.Myfooter {
+    background-color: rgba(245, 204, 241, 0.241);
+    color: #15084b;
+    font-size: 16px;
+    font-family: "El Messiri", sans-serif;
+    position:relative;
+    border-top: 3px solid goldenrod;
+    margin-bottom: 0;
+  }
+  .Myfooter * {
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+  }
+  .row29 {
+    padding: 1rem 1rem;
+  }
+  .row29.primary29 {
+    display: grid;
+    grid-template-columns: 2.5fr 1.5fr 1fr 2fr;
+    align-items: stretch;
+  }
+  .column29 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2em;
+    min-height: 15em;
+  }
+  .h329 {
+    width: 100%;
+    text-align: left;
+    color: #0d0625;
+    font-size: 1.4em;
+    font-family: "El Messiri", sans-serif;
+    white-space: nowrap;
+    margin-bottom: 1rem;
+  }
+  .ul29 {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  .li29:not(:first-child) {
+    margin-top: 0.8em;
+  }
+  .ul29 li a {
+    color: #15084b;
+    font-family: "El Messiri", sans-serif;
+
+    text-decoration: none;
+  }
+  .ul29 li a:hover {
+    color: #2a8ded;
+    font-family: "El Messiri", sans-serif;
+
+  }
+  .about29 p {
+    text-align: justify;
+    line-height: 2;
+    margin: 0;
+    font-family: "El Messiri", sans-serif;
+  }
+  .input29,
+  .button29 {
+    font-family: "El Messiri", sans-serif;
+
+    font-size: 1em;
+    padding: 1em;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  .button29 {
+    background-color: #c7940a;
+    color: #ffffff;
+  }
+  div.social29 {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2.4em;
+    flex-direction: row;
+    margin-top: 0.5em;
+    color: #9e8b57;
+  }
+  div.social229 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    font-size: 14px;
+ 
+    margin-top: 1rem;
+    color: #272112;
+  }
+  .social229 svg {
+    color: rgb(55, 47, 12);
+    font-size: 18px;
+  }
+  .social229 span{
+    margin-left: 1rem;
+    font-size: 13px;
+    font-weight: 800;
+    color:#000000c4;
+  }
+  .social229 p{
+    font-size: 15px;
+  }
+  .social29 i {
+    color: #020509;
+    font-family: "El Messiri", sans-serif;
+
+  }
+  
+  .copyright29 {
+ 
+    background-color: #25262e;
+  }
+  .footer-menu29{
+    float: left;
+      
+  }
+  
+  .footer-menu29 a{
+    color: #cfd2d6;
+    padding: 6px;
+    font-family: "El Messiri", sans-serif;
+line-height: 100%;
+  
+    text-decoration: none;
+  }
+  .footer-menu29 a:hover{
+    color: #78711d;
+    font-family: "El Messiri", sans-serif;
+
+    
+
+  }
+  .copyright29 p {
+    color: white;
+line-height: 100%;
+
+    font-size: 0.9em;
+    font-family: "El Messiri", sans-serif;
+    text-align: right;
+  }
+  @media screen and (max-width: 850px) {
+    .row29.primary29 {
+      grid-template-columns: 1fr ;
+      grid-template-rows: 1.4fr 1fr 1fr 1fr ;
+    }
+  
+  }

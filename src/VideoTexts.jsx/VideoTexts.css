@@ -1,0 +1,38 @@
+.MainCont {
+  max-width: 100vw;
+  width: 100vw;
+  padding: 2rem 5vw;
+}
+.secondCont {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+@media (max-width: 960px) {
+  .MainCont {
+    max-width: 100vw;
+    width: 100vw;
+    padding: 2rem 3vw;
+  }
+  .secondCont {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media (max-width: 650px) {
+  .MainCont {
+    max-width: 100vw;
+    width: 100vw;
+    padding: 2rem 2vw;
+  }
+  .secondCont {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+}

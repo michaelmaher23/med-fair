@@ -8,10 +8,10 @@
       }
 
 body{
- 
+ width: 100vw;
  overflow-x: hidden;
  
- 
+
  
  
  
@@ -31,4 +31,7 @@ body{
   
   scroll-behavior: smooth;
  
+  }
+  .gm-style .place-card-large {
+    display: none;
   }
