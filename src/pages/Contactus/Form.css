@@ -18,6 +18,7 @@
 .container156 .myinput svg {
   color: #887e58;
   font-size: .87rem;
+  margin-right: 3px;
 }
  
 .container156 input[type="text"],
@@ -156,4 +157,10 @@ input[type=file]::file-selector-button {
 
 input[type=file]::file-selector-button:hover {
   background: #9a753a;
+}
+
+.container156 input,select,textarea::placeholder{
+  font-family: "El Messiri", sans-serif;
+
+
 }

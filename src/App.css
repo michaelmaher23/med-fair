@@ -8,11 +8,12 @@
       }
 
 body{
- width: 100vw;
+ 
+margin: 0;
+padding: 0;
+ 
+  box-sizing: border-box;
  overflow-x: hidden;
- 
-
- 
  
  
 
@@ -21,13 +22,18 @@ body{
  
 
  }
+ .contall1{
+  width: 100vw;
+ }
+ .App{
  
+  width: 100vw;
+  overflow: hidden;
+ }
  
 *{ 
   
-   margin:0;
-  box-sizing: border-box;
-  padding: 0;
+  
   
   scroll-behavior: smooth;
  

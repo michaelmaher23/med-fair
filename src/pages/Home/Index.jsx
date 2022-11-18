@@ -19,17 +19,14 @@ import VideoCard from "../../VideoCards/VideoCard";
 import VideoCards from "../../VideoCards/VideoCards";
 import SideNav from "../../MysideNav/SideNav";
 import Video from "../../Video/Video";
-
+import Navbar from "./Navbar"
 import VideoTexts from "../../VideoTexts.jsx/VideoTexts";
 function Index() {
- 
- 
- 
-
+  
   return (
     <>
+    <Navbar/>
       <div className="all777">
-        {" "}
         <div className="back777">
            <video   className="video777" autoPlay muted loop>
             <source src={video} type="video/mp4"></source>
@@ -47,7 +44,10 @@ function Index() {
         </p>
         <button className="btn777">Get Started</button>
       </div>
-       <VideoCards /> 
+      <div className="backgroundstatic">
+           <VideoCards TxtAlign={"center"}/> 
+      </div>
+    
       <VideoTexts />
       <Video />
     

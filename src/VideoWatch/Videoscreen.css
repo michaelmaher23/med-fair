@@ -1,0 +1,51 @@
+.myvideo2 {
+    width:95%;
+       display: block;
+    margin: auto;
+    height: 85vh;
+    margin-top: 0rem;
+    margin-bottom:1rem;
+    border-radius: 7px;
+ 
+  }
+  .mygrid77{
+   
+    display: grid;
+    grid-template-columns: 70% 30%;
+  }
+  @media (max-width: 800px) {
+    .myvideo2 {
+      width: 92%;
+      height:85vh;
+      display: block;
+      margin: auto;
+   
+      margin-bottom: 4rem;
+  
+      overflow: hidden;
+    }
+    .mygrid77{
+   
+      display: grid;
+      grid-template-columns: 100%;
+    }
+  }
+  @media (max-width: 500px) {
+    .myvideo2 {
+      width: 100%;
+      height:33vh;
+      display: block;
+      margin: auto;
+     
+      margin-bottom: 4rem;
+  
+      overflow: hidden;
+    }
+    .mygrid77{
+   
+      display: grid;
+      grid-template-columns: 100%;
+    }
+  }
+
+  

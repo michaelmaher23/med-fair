@@ -1,0 +1,45 @@
+.videocard {
+    width:90%;
+    margin-bottom: 16px;
+}
+
+.videocard__image {
+    height: 120px;
+    width: 200px;
+    border-radius: 4px;
+}
+
+.videocard__info {
+    display: flex;
+    margin-top: 7px;
+    padding-right: 30px;
+}
+
+.videocard__text {
+    margin-left: 13px;
+}
+
+.videocard__text > h4 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    font-family: "El Messiri", sans-serif;
+}
+
+.videocard__text > p {
+    font-size: 14px;
+    color: rgb(110, 108, 108);
+    font-family: "El Messiri", sans-serif;
+}
+
+.videocard__avatar {
+    height: 30px !important;
+    width: 30px !important;
+    border-radius: 50%;
+}
+
+
+
+.videocard__text > * {
+    margin: 1px;
+}

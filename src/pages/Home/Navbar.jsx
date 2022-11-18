@@ -12,8 +12,8 @@ import {
   faYoutubeSquare,
 } from "@fortawesome/free-brands-svg-icons";
 import { useEffect } from "react";
-import { useLocation } from 'react-router-dom'
-
+import { useLocation, useParams } from "react-router-dom";
+import Logo from './Logo.svg'
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Footer from "../../MYFOOTER/Footer";
@@ -22,7 +22,6 @@ import Video from "../../Video/Video";
 import VideoTexts from "../../VideoTexts.jsx/VideoTexts";
 import VideoComponent from "../../VideoTexts.jsx/VideoComponent";
 function Navbar() {
- 
   const [show, SetShow] = useState(true);
   const [show3, SetShow3] = useState(true);
   const [show2, SetShow2] = useState(false);
@@ -46,29 +45,37 @@ function Navbar() {
     SetShow5(!show5);
   };
   const location = useLocation();
+  let { videoId } = useParams();
+  useEffect(() => {
+    if (location.pathname == `/watch/${videoId}`) {
+      let navbar=document.getElementsByClassName("navbar777")[0]
+      navbar.style.backgroundColor="transparent"
+     let list1= document.getElementsByClassName("lnk33")
+      for(let i=0 ;i<list1.length;i++)
+      {
+        list1[i].classList.add("myclass")
+      }
 
-  useEffect(()=>{
-if(location.pathname!=="/"){
-        document.getElementsByClassName("navbar777")[0].style.backgroundColor="   rgb(0 0 0 / 45%)";
-    
-    document.getElementsByClassName("navbar77")[0].style.backgroundColor="   rgb(0 0 0 / 45%)";
-
-}else{
-  document.getElementsByClassName("navbar777")[0].style.backgroundColor="transparent";
-  document.getElementsByClassName("navbar77")[0].style.backgroundColor="transparent";
-
-}
-
-  })
+     } else if (location.pathname=="/contact") {
+      let navbar=document.getElementsByClassName("navbar777")[0]
+      navbar.style.background="linear-gradient(#2e2e2eb0,rgb(0,0,0,.6), rgb(0,0,0,.3),transparent)"
   
- 
-      
+      let list= document.getElementsByClassName("lnk33")
+      for(let i=0 ;i<list.length;i++)
+      {
+        list[i].classList.add("myclass2")
+      }
+
+     } else{
+
+     }
+  },[videoId]);
 
   return (
     <div>
       <header className="navbar777">
         <div>
-          <h1 className="titlemain">Medical</h1>&nbsp;
+        <img src={Logo} className="titlemain"/>&nbsp;
           <span className="titlespan">Media</span>
         </div>
 
@@ -79,22 +86,32 @@ if(location.pathname!=="/"){
           </div>
         </div>
         <div style={{ display: show ? "flex" : "none" }} className="nav777">
-          <Link to={"/"} className="navelmnt">
-            Home
+          <Link to={"/"}  className="lnk33">
+            <span    className="underline"   >
+              <div className="inner"></div>
+               Home</span>
           </Link>
-          <Link to={"/"} className="navelmnt">
-            Trending
+          <Link to={"/"} className="lnk33"  >
+            <span   className="underline  "    > 
+            <div className="inner"></div>
+            Trending </span>
           </Link>
-          <a
-            href={"https://medicalprojectnet.herokuapp.com/medproducts"}
-            className="navelmnt"
-          >
+          <a className="lnk33">
+              <span  className="underline  "   >
+                <div className="inner"></div>
             Products
+          </span>
           </a>
+        
           <div className="main7">
-            <a className="label7" href="#">
-              Create
-            </a>
+           <div className="lnk33  label7">
+    <span   className=" underline "   >
+              
+              <div className="inner"></div>
+              Create</span>
+
+           </div>
+        
             <ul className="sub7">
               <li
                 style={{
@@ -103,7 +120,7 @@ if(location.pathname!=="/"){
                   paddingRight: "10px",
                 }}
               >
-                <a href="#">Upload </a>
+                <a href="#"   >Upload</a>
                 <FontAwesomeIcon
                   style={{ display: "inline" }}
                   icon={faFileArrowUp}
@@ -125,8 +142,14 @@ if(location.pathname!=="/"){
             </ul>
           </div>
 
-          <Link to={"/"} className="navelmnt">
-            About
+          <Link to={"/"}   className="lnk33" >
+           <span   className=" underline "  >
+            <div className="inner"></div>
+               About
+           </span>
+             
+           
+          
           </Link>
         </div>
 
@@ -137,7 +160,7 @@ if(location.pathname!=="/"){
       </header>
       <header className="navbar77">
         <div style={{ visibility: show3 ? undefined : "hidden" }}>
-          <h1 className="titlemain">Medical</h1>&nbsp;
+          <img src={Logo} className="titlemain"/>&nbsp;
           <span className="titlespan">Media</span>
         </div>
 
@@ -210,13 +233,15 @@ if(location.pathname!=="/"){
               </div>
               <div className="col">
                 <hr className="hr7" />
-                <input className="input555"
+                <input
+                  className="input555"
                   type="text"
                   name="username"
                   placeholder="Username"
                   required
                 />
-                <input className="input555"
+                <input
+                  className="input555"
                   type="password"
                   name="password"
                   placeholder="Password"

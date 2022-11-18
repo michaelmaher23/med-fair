@@ -1,94 +1,317 @@
 .myvideocardscontainer {
-  width: 94vw;
+  width: 91.5vw;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: flex-start;
+  gap: 3%;
 }
-
-.cardcontainer29 {
-  width: 22%;
-  border-radius: 7px;
-  margin: auto;
+.mydiv333 {
+  width: 31%;
   margin-bottom: 2rem;
+  cursor: pointer;
+  transition: all 0.4s linear;
+}
+.container222 {
+  padding: 10px;
+}
+.cardcontainer29 {
+  align-self: center;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0.3px 3px 10px rgba(193, 193, 193, 0.777);
+
+  background-color: rgba(255, 255, 255, 0.934);
   transition: all 0.2s linear;
 }
-.cardcontainer29:hover {
-  border-radius: 7px;
-  margin: auto;
-  margin-bottom: 2rem;
+.mydiv333:hover {
   transform: translateY(3px);
 }
+.mydiv333:hover .cardimage29 {
+  transition: all 1s ease-in-out;
+  transform: scale(105%) translateX(-7px);
+}
 .cardimagecontainer29 {
-  height: 8.5rem;
-  border-radius: 3px;
-  overflow: hidden;
+  height: 10rem;
   position: relative;
-
   width: 100%;
+  overflow: hidden;
 }
 
 .cardimage29 {
-  height: 100%;
+  width: 100%;
+  transition: all 1s ease-in-out;
+  height: 110%;
   display: block;
   width: 100%;
 }
+.icon777 {
+  font-size: 0.86rem;
+  color: rgb(152, 130, 75);
+  margin-top: -2px;
+}
 .cardimagespan29 {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+  top: 0rem;
+  left: 0rem;
   z-index: 6;
-  color: wheat;
+ 
+  
+  line-height: 100%;
+  padding:7px;
+  font-family: "El Messiri", sans-serif;
+  background: linear-gradient(rgb(172, 174, 150), rgba(133, 139, 149, 0.568));
+  color: rgb(255, 255, 255);
+  border-bottom-right-radius: 6px;
+}
+.diagonal {width: 8rem;
+  height: 2rem;
+  text-align: center;
+  top:-1rem;
+  transform:translateY(100%) translateX(-25%)  rotate(-45deg)   ;
+
 }
 .flexcategrank {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  font-family: "El Messiri", sans-serif;
   align-items: center;
+  height: max-content;
+  margin-bottom: 5px;
+}
+.flexcategrankcenter {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-family: "El Messiri", sans-serif;
+  align-items: center;
+  height: max-content;
+  margin-bottom: 5px;
+}
+.categcenter {
+  width: fit-content;
+  padding:6px ;
+  margin: auto;
+  text-align: center;
 }
 .categ {
 }
 .categspan {
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+  line-height: 100%;
+  color: rgb(82, 63, 16);
+}
+.categspancenter {
+  font-size: 1rem;
+  font-weight: bold;
+  display: block;
+  line-height: 100%;
+  color: rgb(82, 63, 16);
+  text-align: center;
+  width: fit-content;
+  margin: auto;
 }
 .rank {
 }
 .rankp {
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-bottom: 0;
+  color: rgb(73, 71, 71);
 }
 .mytitle29 {
-    width: 100%;
- }
+  width: 100%;
+}
 .mytitleheading {
-   width: 100%;
-   white-space:unset;
+  width: 100%;
+  white-space: unset;
+  font-weight: bold;
+  font-size: 0.97rem;
+  max-height: 120px;
+  overflow: hidden;
+  display: block;
+  line-height: 1.16rem;
+  font-family: "El Messiri", sans-serif;
+}
+.mytitle29center {
+  width: 100%;
+}
+.mytitleheadingcenter {
+  width: 100%;
+  white-space: unset;
+  font-weight: bold;
+  font-size: 0.97rem;
+  max-height: 120px;
+  overflow: hidden;
+  display: block;
+  line-height: 1.16rem;
+  text-align: center;
+  font-family: "El Messiri", sans-serif;
+}
 
-   font-size: 13px;
+.mydiv333:hover .mytitleheading {
+  transition: all 1s ease-in-out;
+  text-decoration: underline;
+}
+.mydiv333:hover .mytitleheadingcenter {
+  transition: all 1s ease-in-out;
+  text-decoration: underline;
+}
+.mytitleheading2 {
+  width: 100%;
+  font-size: 0.93rem;
 
+  display: block;
+  text-align: justify;
+  max-height: 108px;
+  overflow: hidden;
+  line-height: 1.25rem;
+  font-family: "El Messiri", sans-serif;
+  margin-bottom: 8px;
+}
+.mytitleheading2center {
+  width: 100%;
+  font-size: 0.93rem;
 
- }
+  display: block;
+  text-align: center;
+  max-height: 108px;
+  overflow: hidden;
+  line-height: 1.25rem;
+  font-family: "El Messiri", sans-serif;
+  margin-bottom: 8px;
+}
 .icondesc {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: start;
+}
+.icondesccenter {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: start;
+  width: fit-content;
+  margin: auto;
 }
 .icon29 {
+  color: rgb(157, 131, 66);
+  margin-right: 4px;
+  margin-left: 4px;
+  display: block;
 }
 .desc29 {
+  font-weight: bold;
+  font-size: 0.88rem;
+
+  overflow: hidden;
+  display: block;
+
+  font-family: "El Messiri", sans-serif;
+  margin-bottom: 0;
 }
 .watch29 {
-}
-.watchlater {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  margin: 2px 0 5px 0;
 }
 
-@media (max-width: 800px) {
-  .cardcontainer29 {
-    width: 45%;
-    border-radius: 7px;
+.watchlater {
+  width: fit-content;
+  min-height: 1.1rem;
+  line-height: 1.1rem;
+  padding: 4px 6px 1px 6px;
+  font-family: "El Messiri", sans-serif;
+  background-color: rgba(214, 201, 129, 0.818);
+  border-radius: 3px;
+  font-size: 15px;
+  display: block;
+  margin: 5px 5px 0px 0px;
+  background: linear-gradient(
+    rgba(203, 207, 160, 0.504),
+    rgba(133, 139, 149, 0.23)
+  );
+  color: rgb(29, 3, 3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  border: 0;
+  outline: 0;
+  box-shadow: 0.2px 2px 5px rgba(98, 155, 163, 0.389);
+}
+.desc29 {
+  font-weight: bold;
+  font-size: 0.88rem;
+
+  overflow: hidden;
+  display: block;
+
+  font-family: "El Messiri", sans-serif;
+  margin-bottom: 0;
+}
+.watch29 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  margin: 2px 0 5px 0;
+}
+.watch29center {
+ 
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+width: fit-content;
+margin: auto;
+margin-top: 7px;
+margin-bottom: 7px;
+
+}
+@media (max-width: 960px) {
+  .myvideocardscontainer {
+    width: 94vw;
     margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1%;
+  }
+  .mydiv333 {
+    width: 32%;
     margin-bottom: 2rem;
   }
 }
-@media (max-width: 650px) {
-  .cardcontainer29 {
-    width: 95%;
-    border-radius: 7px;
+@media (max-width: 800px) {
+  .myvideocardscontainer {
+    width: 94vw;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 5%;
+  }
+  .mydiv333 {
+    width: 45%;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 540px) {
+  .myvideocardscontainer {
+    width: 92vw;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .mydiv333 {
+    width: 100%;
     margin: auto;
     margin-bottom: 2rem;
   }
