@@ -1,80 +1,256 @@
-import React, {useEffect, useState} from 'react';
-import VideoCard from './VideoCard';
-import './RecommendedVideos.css';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
-  
+import React, { useEffect, useState } from "react";
+import VideoCard from "./VideoCard";
+import "./RecommendedVideos.css";
+import axios from "axios";
+import { Link, useParams } from "react-router-dom";
 
 const RecommendedVideos = () => {
-
-    const [videoCards, setVideoCards] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
-    const [isError, setIsError] = useState(false);
-{/*
+  const { videoId } = useParams();
+  const [videos1, setVideos1] = useState([]);
+  const [videos2, setVideos2] = useState([]);
+  const [videos0, setVideos0] = useState([]);
+  const [videos10, setVideos10] = useState([]);
+  const [watch, setWatch] = useState([]);
+  const [videoCards, setVideoCards] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [varr, setVarr] = useState("null");
+  {
+    /*
         .get(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=-zxGnwgdmbQ%2C7JH5agRS02w%2CeIho2S0ZahI&key=AIzaSyB0G5FQlHARQ7HMwcQ0Ozzui0J6lXafT_I`)
 
-*/}
-    useEffect(() => {
-      axios
+*/
+  }
+  useEffect(() => {
+    async function func() {
+      if (
+        !JSON.parse(localStorage.getItem("dataq")) ||
+        JSON.parse(localStorage.getItem("dataq"))?.length == 0
+      ) {
+        await axios
 
-        .get(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=50&playlistId=PLw8VY87mGamwXtyTsdwSP1FusDTW3RtkR&key=AIzaSyB0G5FQlHARQ7HMwcQ0Ozzui0J6lXafT_I`)
-        .then(response => {
-          console.log(response.data.items)
-          createVideoCards(response.data.items)
-         })
-        .catch(error => {
-          console.log(error);
-          setIsError(true);
-        })
-    }, [])
+          .get(
+            `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=50&playlistId=PLDhF6rfREScHkdYmXU-GXXMQ1iCgjLTyK&key=AIzaSyB0G5FQlHARQ7HMwcQ0Ozzui0J6lXafT_I`
+          )
+          .then((response0) => {
+            console.log(response0.data.items);
+            setVideos0(response0?.data?.items || []);
+          })
+          .catch((error) => {
+           
 
-    async function createVideoCards(videoItems) {
-      let newVideoCards = [];
-      for (const video of videoItems) {
-        const videoId = video.contentDetails.videoId;
+            console.log(error);
+          });
+        await axios
 
-        const snippet = video.snippet;
-         
-        const image = snippet?.thumbnails?.standard?.url;
-        const title = snippet.title;
-        const channel = snippet.channelTitle;
-        newVideoCards.push({
-          videoId,
-          image,
-          title,
-          channel,
-          
-       
-        });
-      };
-      setVideoCards(newVideoCards);
-      setIsLoading(false);
+          .get(
+            `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=50&playlistId=PLasn7YWQovUafIl5hgi0DZKweYvFeEUKz&key=AIzaSyA7_yhMrQF-fy3rNsoGNCJeCSEoiOoirhg`
+          )
+          .then((response10) => {
+            console.log(response10.data.items);
+            setVideos10(response10.data.items || []);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+        await axios
+          .get(
+            `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=50&playlistId=PLw8VY87mGamwXtyTsdwSP1FusDTW3RtkR&key=AIzaSyCaCtWpPncvcxtjaMAW55EmTdssWOwHdf0`
+          )
+          .then((response) => {
+            console.log(response.data.items);
+            setVideos1(response.data.items || []);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+        await axios
+
+          .get(
+            `https://youtube.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=${videoId}&maxResults=50&type=video&key=AIzaSySEoiOoirhg`
+          )
+          .then((response2) => {
+            console.log(response2.data.items);
+            setVideos2(response2.data.items || []);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      } else {
+        createVideoCards(JSON.parse(localStorage.getItem("dataq")));
+      }
     }
 
-    if(isError) {
-      return  "eror"
+    if (videoId != null) {
+      func();
+      setTimeout(() => {setVarr("play");}, 5000);
+
+      window.scrollTo(0, 0);
     }
-    return (
-        
-        <div className='recommendedvideos'>
-             <div className="recommendedvideos__videos">
-                {
-                  videoCards.map(item => {
-                    return (
-                      <Link  style={{color:'unset',textDecoration:'none'}} to={`/watch/${item.videoId}`}>
-                    
-                        <VideoCard key={item.videoId}
-                            title={item.title}
-                            image={item.image}
-                            views={item.views}
-                             channel={item.channel}
-                         />  </Link>
-                    )
-                  })
-                }
-            </div>
-        </div>
-    )
-}
+  }, []);
+
+  useEffect(() => {
+    async function func() {
+      if (
+        !JSON.parse(localStorage.getItem("dataq")) ||
+        JSON.parse(localStorage.getItem("dataq"))?.length == 0
+      ) {
+        await axios
+
+          .get(
+            `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=50&playlistId=PLDhF6rfREScHkdYmXU-GXXMQ1iCgjLTyK&key=AIzaSyCaCtWpPncvcxtjaMAW55EmTdssWOwHdf0`
+          )
+          .then((response0) => {
+            console.log(response0.data.items);
+            setVideos0(response0?.data?.items || []);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+          await axios
+
+          .get(
+            `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=50&playlistId=PLDlmQmN0if28mZMfogkTka4TU3XQMTRNZ&key=AIzaSyCaCtWpPncvcxtjaMAW55EmTdssWOwHdf0`
+          )
+          .then((response0) => {
+            console.log(response0.data.items);
+            setWatch(response0?.data?.items || []);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+        await axios
+
+          .get(
+            `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=50&playlistId=PLasn7YWQovUafIl5hgi0DZKweYvFeEUKz&key=AIzaSyCaCtWpPncvcxtjaMAW55EmTdssWOwHdf0`
+          )
+          .then((response10) => {
+            console.log(response10.data.items);
+            setVideos10(response10.data.items || []);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+        await axios
+          .get(
+            `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=50&playlistId=PLw8VY87mGamwXtyTsdwSP1FusDTW3RtkR&key=AIzaSyCaCtWpPncvcxtjaMAW55EmTdssWOwHdf0`
+          )
+          .then((response) => {
+            console.log(response.data.items);
+            setVideos1(response.data.items || []);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+        await axios
+
+          .get(
+            `https://youtube.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=${videoId}&maxResults=50&type=video&key=AIzaSyA7_yhMrQF-fy3rNsoGNCJeCSEoiOoirhg`
+          )
+          .then((response2) => {
+            console.log(response2.data.items);
+            setVideos2(response2.data.items || []);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      } else {
+
+        createVideoCards(JSON.parse(localStorage.getItem("dataq")));
+      
+      }
+    }
+
+    if (videoId !== null) {
+      func();
+      setTimeout(() => {setVarr("play");}, 5000);
+
+      window.scrollTo(0, 0);
+    }
+  }, [videoId]);
+  const [local, setLocal] = useState(false);
+  useEffect(() => {
+    if (varr == "play") {
+      if (
+        !localStorage.getItem("dataq") ||
+        JSON.parse(localStorage.getItem("dataq"))?.length == 0
+      ) {
+        const u = [...videos0,...watch, ...videos1, ...videos10, ...videos2];
+        localStorage.setItem("dataq", JSON.stringify(u));
+        console.log(u);
+        setLocal(true);
+      }
+    }
+  }, [varr]);
+  useEffect(() => {
+    let var5 = JSON.parse(localStorage.getItem("dataq")) || [];
+    createVideoCards(var5);
+  }, [local]);
+
+  function shuffleArray(array) {
+    for (var i = array?.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+    }
+    return array;
+  }
+
+  function createVideoCards(c) {
+    let dataq3 = [];
+    dataq3 = shuffleArray(c);
+
+    let newVideoCards = [];
+
+    for (const video of dataq3) {
+      const videoId = video?.contentDetails?.videoId
+        ? video?.contentDetails?.videoId
+        : video.id.videoId;
+
+      const snippet = video.snippet;
+
+      const image = snippet?.thumbnails?.standard?.url;
+      const title = snippet.title;
+      const channel = snippet.channelTitle;
+      newVideoCards.push({
+        videoId,
+        image,
+        title,
+        channel,
+      });
+    }
+
+    setVideoCards(newVideoCards);
+
+    setIsLoading(false);
+  }
+
+  return (
+    <div className="recommendedvideos">
+      <div className="recommendedvideos__videos">
+        {!isLoading ? (
+          videoCards.map((item) => {
+            return (
+              <Link
+                style={{ color: "unset", textDecoration: "none" }}
+                to={`/watch/${item.videoId}`}
+              >
+                <VideoCard
+                  key={item.videoId}
+                  title={item.title}
+                  image={item.image}
+                  views={item.views}
+                  channel={item.channel}
+                />{" "}
+              </Link>
+            );
+          })
+        ) : (
+          <></>
+        )}
+      </div>
+    </div>
+  );
+};
 
 export default RecommendedVideos;

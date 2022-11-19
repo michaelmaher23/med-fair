@@ -43,3 +43,16 @@
 .videocard__text > * {
     margin: 1px;
 }
+@media screen and (max-width:500px) {
+    .videocard {
+        width:90%;
+        margin-left: 1rem;
+        margin-bottom: 16px;
+    }
+    
+    .videocard__image {
+        height: 24vh;
+        width: 80vw;
+        border-radius: 4px;
+    }
+}

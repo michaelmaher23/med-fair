@@ -16,7 +16,7 @@ function Videoscreen() {
   useEffect(() => {
     axios
       .get(
-        `https://www.googleapis.com/youtube/v3/videos?part=snippet%2C%20statistics&id=${videoId}&key=AIzaSyB0G5FQlHARQ7HMwcQ0Ozzui0J6lXafT_I`
+        `https://www.googleapis.com/youtube/v3/videos?part=snippet%2C%20statistics&id=${videoId}&key=AIzaSyA7_yhMrQF-fy3rNsoGNCJeCSEoiOoirhg`
       )
       .then((response) => {
         createVideoInfo(response.data["items"][0]);
@@ -35,7 +35,7 @@ function Videoscreen() {
     const stats = video.statistics;
     const channelId = snippet.channelId;
     const response = await axios.get(
-      `https://www.googleapis.com/youtube/v3/channels?part=snippet%2C%20statistics&id=${channelId}&key=AIzaSyB0G5FQlHARQ7HMwcQ0Ozzui0J6lXafT_I`
+      `https://www.googleapis.com/youtube/v3/channels?part=snippet%2C%20statistics&id=${channelId}&key=AIzaSyA7_yhMrQF-fy3rNsoGNCJeCSEoiOoirhg`
     );
 
     const channelImage = response.data.items[0].snippet.thumbnails.medium.url;
