@@ -108,7 +108,7 @@
   right: 0;
   left: 0;
 }
-@media (max-height: 450px) {
+@media (max-height: 900px) {
   .fixedsidebox {
     display: none;
   }

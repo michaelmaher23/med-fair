@@ -9,18 +9,22 @@ import SideBox from "./VideoTexts.jsx/SideBox.jsx";
 import Watch from "./VideoWatch/Watch.jsx";
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <SideBox />
+    < >
+      <BrowserRouter >
+      <div className="App">
+
+    
+        <SideBox  />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/contact" element={<Contactus />} />
           <Route path="/about" element={<Aboutus />} />
           <Route path="/watch/:videoId" element={<Watch />} />
         </Routes>
-        <Footer />
+        <Footer /> 
+         </div>
       </BrowserRouter>{" "}
-    </div>
+    </>
   );
 }
 
