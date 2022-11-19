@@ -17,7 +17,8 @@ const RecommendedVideos = () => {
   {
     /*
         .get(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=-zxGnwgdmbQ%2C7JH5agRS02w%2CeIho2S0ZahI&key=AIzaSyB0G5FQlHARQ7HMwcQ0Ozzui0J6lXafT_I`)
-
+            `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=50&playlistId=PLDhF6rfREScHkdYmXU-GXXMQ1iCgjLTyK&key=AIzaSyB0G5FQlHARQ7HMwcQ0Ozzui0J6lXafT_I`
+ `https://youtube.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=${videoId}&maxResults=50&type=video&key=AIzaSyA7_yhMrQF-fy3rNsoGNCJeCSEoiOoirhg`
 */
   }
   useEffect(() => {
@@ -66,7 +67,8 @@ const RecommendedVideos = () => {
         await axios
 
           .get(
-            `https://youtube.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=${videoId}&maxResults=50&type=video&key=AIzaSySEoiOoirhg`
+            `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=50&playlistId=PLDlmQmN0if28mZMfogkTka4TU3XQMTRNZ&key=AIzaSyB0G5FQlHARQ7HMwcQ0Ozzui0J6lXafT_I`
+
           )
           .then((response2) => {
             console.log(response2.data.items);
@@ -144,7 +146,7 @@ const RecommendedVideos = () => {
         await axios
 
           .get(
-            `https://youtube.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=${videoId}&maxResults=50&type=video&key=AIzaSyA7_yhMrQF-fy3rNsoGNCJeCSEoiOoirhg`
+            `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet%2CcontentDetails&maxResults=50&playlistId=PLDhF6rfREScHkdYmXU-GXXMQ1iCgjLTyK&key=AIzaSyA7_yhMrQF-fy3rNsoGNCJeCSEoiOoirhg`
           )
           .then((response2) => {
             console.log(response2.data.items);
@@ -162,7 +164,7 @@ const RecommendedVideos = () => {
 
     if (videoId !== null) {
       func();
-      setTimeout(() => {setVarr("play");}, 5000);
+      setTimeout(() => {setVarr("play");}, 2000);
 
       window.scrollTo(0, 0);
     }
