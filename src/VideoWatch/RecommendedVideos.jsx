@@ -81,15 +81,18 @@ const RecommendedVideos = () => {
         createVideoCards(JSON.parse(localStorage.getItem("dataq")));
       }
     }
-
+ 
     if (videoId != null) {
       func();
+      
       setTimeout(() => {setVarr("play");}, 5000);
+       window.scrollTo(0, 0); 
 
-      window.scrollTo(0, 0);
-    }
+    }    
+
+
   }, []);
-
+ 
   useEffect(() => {
     async function func() {
       if (
@@ -165,10 +168,20 @@ const RecommendedVideos = () => {
     if (videoId !== null) {
       func();
       setTimeout(() => {setVarr("play");}, 2000);
-
-      window.scrollTo(0, 0);
+ 
+      
     }
+ 
+
   }, [videoId]);
+  useEffect(() => {
+    const body = document.querySelector('#root');
+
+    body.scrollIntoView({
+      
+    }, 200)
+
+}, [videoId]);
   const [local, setLocal] = useState(false);
   useEffect(() => {
     if (varr == "play") {
@@ -180,6 +193,7 @@ const RecommendedVideos = () => {
         localStorage.setItem("dataq", JSON.stringify(u));
         console.log(u);
         setLocal(true);
+      
       }
     }
   }, [varr]);
