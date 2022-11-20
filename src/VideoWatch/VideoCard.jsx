@@ -12,9 +12,9 @@ const VideoCard = ({image, title, channel, views, timestamp, channelImage}) => {
               src={Logo} 
             />
             <div className="videocard__text">
-              <h4>{title}</h4>
-              <p>{channel}</p>
-              <p>{views} views  </p>
+              <h4 className='head77'>{title}</h4>
+              <p className='head88'>{channel}</p>
+              
             </div> 
           </div>
         </div>
