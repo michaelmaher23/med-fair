@@ -177,7 +177,7 @@ function Navbar() {
           {" "}
           <FontAwesomeIcon icon={faSearch} onClick={funct3} />
           <FontAwesomeIcon icon={faUser} onClick={funct4} />
-          <FontAwesomeIcon icon={faBars} onClick={funct5} />
+        {/* <FontAwesomeIcon icon={faBars} onClick={funct5} />*/}  
         </div>
         <div className={`${show5 ? "cont" : "cont1"}`}>
           <div style={{ display: show5 ? "none" : "block" }}>

@@ -585,15 +585,18 @@ input[type="submit"]:hover {
 
   .right77 {
     display: flex;
-
+ 
+justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
+    gap:20px
   }
   .right77 > * {
     cursor: pointer;
-    margin-right: 10px;
-    font-size: 17px;
-    color: white;
+    margin-right: 0px;
+    font-size: 1.13rem;
+    color: rgb(173, 156, 51);
+   
   }
   .nav77 {
     display: flex;
