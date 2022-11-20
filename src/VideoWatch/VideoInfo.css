@@ -59,7 +59,14 @@ hr {
     font-size: medium;
     margin: 2px;
 }
-
+.videoinfo__subscribe{
+    height: 120px;
+    width:100px;
+    border-radius: 20px;
+  box-shadow: .3px 4px 11px rgba(96, 84, 21, 0.495);
+  margin-right: 0;
+  float: right;
+}
 .videoinfo__channelsubs {
     color: gray;
     font-size: small;

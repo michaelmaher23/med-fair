@@ -3,6 +3,7 @@ import React from 'react';
  import './VideoInfo.css';
  import {} from "@fortawesome/free-regular-svg-icons"
  import {faShare} from "@fortawesome/free-solid-svg-icons"
+ import Capture from "./Capture.PNG"
 const VideoInfo = ({title, description, publishedDate, channelTitle, channelImage, viewCount, likeCount, dislikeCount, subs}) => {
     return (
         <div className='videoinfo'>
@@ -28,8 +29,9 @@ const VideoInfo = ({title, description, publishedDate, channelTitle, channelImag
                     </div>
                     
                 </div>
-                <div className='videoinfo__subscribe'>
-                    <button   >SUBSCRIBE</button>
+                <img className='videoinfo__subscribe' src={Capture}/>
+                <div >
+                   
                 </div>
             </div>
             <div className='videoinfo__channeldesc'>

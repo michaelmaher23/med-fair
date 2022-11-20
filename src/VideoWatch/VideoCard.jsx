@@ -4,7 +4,7 @@ import React from 'react';
 const VideoCard = ({image, title, channel, views, timestamp, channelImage}) => {
     return (
         <div className='videocard'>
-          <img className='videocard__image' src={image} alt='' />
+          <img className='videocard__image' src={image?image:Logo} alt='' />
           <div className="videocard__info">
             <img 
               className='videocard__avatar' 
