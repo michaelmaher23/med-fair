@@ -12,7 +12,7 @@ function Videoscreen() {
   const [videoInfo, setVideoInfo] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
-
+const [gif,setGIF]=useState(true);
   useEffect(() => {
     axios
       .get(
@@ -65,16 +65,21 @@ function Videoscreen() {
       likeCount,
       dislikeCount,
       subs,
-    });
+    }); 
+    setIsLoading(false)
     setTimeout(() => {
-      setIsLoading(false)
-    }, 4000);
+     setGIF(false)
+    },900);
     
   }
   return (<div>
-
-    {!isLoading?(
-<div   className="mygrid77">
+{
+  gif? <div className="mydivload">
+      <img src={aaa}/>
+      </div>:
+      (<>
+      
+    <div   className="mygrid77">
       <div>
         <iframe
           className="myvideo2"
@@ -85,7 +90,7 @@ function Videoscreen() {
           allowFullScreen
         ></iframe>
         <div className="videoplayer__videoinfo">
-          {!isLoading ? (
+        
             <VideoInfo
               title={videoInfo.title}
               description={videoInfo.description}
@@ -97,7 +102,7 @@ function Videoscreen() {
               dislikeCount={videoInfo.dislikeCount}
               subs={videoInfo.subs}
             />
-          ) : null}
+        
         </div>
       </div>
       <div>
@@ -106,11 +111,15 @@ function Videoscreen() {
         </div>
       </div>
     </div>
+      </>)
+}
 
 
-    ):<div className="mydivload">
-<img src={aaa}/>
-      </div>}
+
+  
+
+
+
     </div>);
 }
 

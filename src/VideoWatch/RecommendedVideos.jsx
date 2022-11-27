@@ -130,9 +130,9 @@ useEffect(() => {
     setVideoCards1(shuflled); 
     const body = document.querySelector("#root");
     body.scrollIntoView();
-    setTimeout(() => {
+   
       setIsLoading(false);
-   }, 1000);
+  
  
    
   }, [videoId]);
@@ -162,9 +162,9 @@ useEffect(() => {
     };
 
     MyAsyncFun();
-setTimeout(() => {
+
    setIsLoading(false);
-}, 1000);
+
    
   }, [PlayListId]);
   return (
