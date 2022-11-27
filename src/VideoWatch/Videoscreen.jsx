@@ -5,7 +5,7 @@ import axios from "axios";
 import VideoInfo from "./VideoInfo";
 import "./Videoscreen.css";
 import { useParams } from "react-router-dom";
-
+import aaa from "./aaa.gif"
 function Videoscreen() {
   let { videoId } = useParams();
 
@@ -66,10 +66,15 @@ function Videoscreen() {
       dislikeCount,
       subs,
     });
-    setIsLoading(false)
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 4000);
+    
   }
-  return (
-    <div className="mygrid77">
+  return (<div>
+
+    {!isLoading?(
+<div   className="mygrid77">
       <div>
         <iframe
           className="myvideo2"
@@ -101,7 +106,12 @@ function Videoscreen() {
         </div>
       </div>
     </div>
-  );
+
+
+    ):<div className="mydivload">
+<img src={aaa}/>
+      </div>}
+    </div>);
 }
 
 export default Videoscreen;

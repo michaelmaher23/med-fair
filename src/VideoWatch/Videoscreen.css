@@ -1,51 +1,49 @@
 .myvideo2 {
-    width:95%;
-       display: block;
-    margin: auto;
+  width: 95%;
+  display: block;
+  margin: auto;
+  height: 85vh;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+.mydivload{
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+.mygrid77 {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+@media (max-width: 800px) {
+  .myvideo2 {
+    width: 92%;
     height: 85vh;
-    margin-top: 0rem;
-    margin-bottom:1rem;
-    border-radius: 5px;
- 
+    display: block;
+    margin: auto;
+    margin-bottom: 0rem;
+    overflow: hidden;
   }
-  .mygrid77{
-   
+  .mygrid77 {
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 100%;
   }
-  @media (max-width: 800px) {
-    .myvideo2 {
-      width: 92%;
-      height:85vh;
-      display: block;
-      margin: auto;
-   
-      margin-bottom: 0rem;
-  
-      overflow: hidden;
-    }
-    .mygrid77{
-   
-      display: grid;
-      grid-template-columns: 100%;
-    }
+}
+@media (max-width: 500px) {
+  .myvideo2 {
+    width: 100%;
+    height: 36vh;
+    display: block;
+    margin: auto;
+    margin-bottom: 1rem;
+    border-radius: 0px;
+    overflow: hidden;
   }
-  @media (max-width: 500px) {
-    .myvideo2 {
-      width: 100%;
-      height:36vh;
-      display: block;
-      margin: auto;
-     
-      margin-bottom: 1rem;
-      border-radius: 0px;
-      overflow: hidden;
-    }
-    .mygrid77{
-   
-      display: grid;
-      grid-template-columns: 100%;
-    }
+  .mygrid77 {
+    display: grid;
+    grid-template-columns: 100%;
   }
-
-  
+}

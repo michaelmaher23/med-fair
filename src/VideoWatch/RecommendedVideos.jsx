@@ -8,12 +8,15 @@ import {
   createVideosCards,
   shuffleArray,
 } from "./functions.js";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faCloudflare, faYoutube} from "@fortawesome/free-brands-svg-icons"
 function RecommendedVideos() {
-  const { PlayListId,videoId} = useParams();
+  const { PlayListId, videoId } = useParams();
 
   const [videoCards1, setVideoCards1] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  {/*useEffect(()=>{
+  {
+    /*useEffect(()=>{
     setInterval(() => {
       const MyAsyncFun = async () => {
         const PlayList1 = await getVideosFromYotube(
@@ -57,8 +60,10 @@ function RecommendedVideos() {
       MyAsyncFun()
       setIsLoading(false)
     }, 1000101);
-  },[videoId])*/}
- {/*
+  },[videoId])*/
+  }
+  {
+    /*
 useEffect(() => {
     setIsLoading(true)
     let Nosavedwatch =
@@ -115,51 +120,53 @@ useEffect(() => {
     setIsLoading(false);
   }, [videoId]);
 
-*/} 
-const navigate = useNavigate();
-useEffect(()=>{
-
+*/
+  }
+  const navigate = useNavigate();
+  useEffect(() => {
+    setIsLoading(true);
     const data = JSON.parse(localStorage.getItem("data"));
     const shuflled = shuffleArray(data);
-    setVideoCards1(shuflled);
+    setVideoCards1(shuflled); 
+    const body = document.querySelector("#root");
+    body.scrollIntoView();
+    setTimeout(() => {
+      setIsLoading(false);
+   }, 1000);
  
-  setIsLoading(false);
-},[videoId])
-useEffect(()=>{
-
-  setIsLoading(true)
-  let Nosavedwatch =
-    !localStorage.getItem("data") ||
-    JSON.parse(localStorage.getItem("data"))?.length == 0;
-  const body = document.querySelector("#root");
-  body.scrollIntoView({}, 200);
-  console.log(PlayListId)
-  const MyAsyncFun = async () => {
-    const PlayList1 = await getVideosFromYotube(
-      "50",
-      PlayListId,
-      "AIzaSyCaCtWpPncvcxtjaMAW55EmTdssWOwHdf0"
-    );
    
-    const ArrayofLists = createVideoLists(PlayList1);
- 
+  }, [videoId]);
+  useEffect(() => {
+    setIsLoading(true);
+    let Nosavedwatch =
+      !localStorage.getItem("data") ||
+      JSON.parse(localStorage.getItem("data"))?.length == 0;
+    const body = document.querySelector("#root");
+    body.scrollIntoView({}, 200);
+    console.log(PlayListId);
+    const MyAsyncFun = async () => {
+      const PlayList1 = await getVideosFromYotube(
+        "50",
+        PlayListId,
+        "AIzaSyCaCtWpPncvcxtjaMAW55EmTdssWOwHdf0"
+      );
 
-    console.log(ArrayofLists);
-    const MyList = createVideosCards(PlayList1);
-     
-  
-    
-    let Last = shuffleArray(MyList);
-    localStorage.setItem("data", JSON.stringify(Last));
-    setVideoCards1(Last);
-  };
-  
+      const ArrayofLists = createVideoLists(PlayList1);
+
+      console.log(ArrayofLists);
+      const MyList = createVideosCards(PlayList1);
+
+      let Last = shuffleArray(MyList);
+      localStorage.setItem("data", JSON.stringify(Last));
+      setVideoCards1(Last);
+    };
+
     MyAsyncFun();
-
- 
-    setIsLoading(false);
-
-},[PlayListId])
+setTimeout(() => {
+   setIsLoading(false);
+}, 1000);
+   
+  }, [PlayListId]);
   return (
     <div className="recommendedvideos">
       <div className="recommendedvideos__videos">
@@ -181,7 +188,7 @@ useEffect(()=>{
             );
           })
         ) : (
-          <>Data is not loaded yet</>
+          <div style={{width:"100%",minHeight:'100vh',display:'flex',justifyContent:"space-around",alignItems:'center'}}><FontAwesomeIcon style={{color:" rgb(173, 156, 51)",fontSize:"2rem" ,opacity:'.8'}} icon={faYoutube}/></div>
         )}
       </div>
     </div>
