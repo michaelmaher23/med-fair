@@ -8,7 +8,7 @@ import { faArrowsUpToLine, faBars, faCircle, faClose } from '@fortawesome/free-s
 
 
 function Navbar() {
-  const [sidebar, setSidebar] = useState(true);
+  const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
 

@@ -19,7 +19,8 @@ function App() {
           <Route path="/" element={<Index />} />
           <Route path="/contact" element={<Contactus />} />
           <Route path="/about" element={<Aboutus />} />
-          <Route path="/watch/:videoId" element={<Watch />} />
+          <Route path="/watch/:PlayListId/:videoId" element={<Watch />} />
+          <Route path="/watch/:PlayListId" element={<Watch />} />
         </Routes>
         <Footer /> 
          </div>

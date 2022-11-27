@@ -26,7 +26,7 @@ function createVideoLists(PlayListofAllVideos) {
   let shuffledArray = PlayListofAllVideos;
   let PlayListLength = shuffledArray.length;
   let List1 = shuffledArray.slice(0, parseInt(PlayListLength / 2));
-  let List2 = shuffledArray.slice(((parseInt(PlayListLength / 2)+2)));
+  let List2 = shuffledArray.slice(parseInt(PlayListLength / 2)+2);
   return [List1, List2];
 }
 function createVideosCards(List) {

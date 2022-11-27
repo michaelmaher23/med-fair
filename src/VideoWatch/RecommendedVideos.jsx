@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import VideoCard from "./VideoCard";
 import "./RecommendedVideos.css";
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import {
   getVideosFromYotube,
   createVideoLists,
@@ -9,7 +9,7 @@ import {
   shuffleArray,
 } from "./functions.js";
 function RecommendedVideos() {
-  const { videoId } = useParams();
+  const { PlayListId,videoId} = useParams();
 
   const [videoCards1, setVideoCards1] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -58,7 +58,8 @@ function RecommendedVideos() {
       setIsLoading(false)
     }, 1000101);
   },[videoId])*/}
-  useEffect(() => {
+ {/*
+useEffect(() => {
     setIsLoading(true)
     let Nosavedwatch =
       !localStorage.getItem("data") ||
@@ -114,6 +115,51 @@ function RecommendedVideos() {
     setIsLoading(false);
   }, [videoId]);
 
+*/} 
+const navigate = useNavigate();
+useEffect(()=>{
+
+    const data = JSON.parse(localStorage.getItem("data"));
+    const shuflled = shuffleArray(data);
+    setVideoCards1(shuflled);
+ 
+  setIsLoading(false);
+},[videoId])
+useEffect(()=>{
+
+  setIsLoading(true)
+  let Nosavedwatch =
+    !localStorage.getItem("data") ||
+    JSON.parse(localStorage.getItem("data"))?.length == 0;
+  const body = document.querySelector("#root");
+  body.scrollIntoView({}, 200);
+  console.log(PlayListId)
+  const MyAsyncFun = async () => {
+    const PlayList1 = await getVideosFromYotube(
+      "50",
+      PlayListId,
+      "AIzaSyCaCtWpPncvcxtjaMAW55EmTdssWOwHdf0"
+    );
+   
+    const ArrayofLists = createVideoLists(PlayList1);
+ 
+
+    console.log(ArrayofLists);
+    const MyList = createVideosCards(PlayList1);
+     
+  
+    
+    let Last = shuffleArray(MyList);
+    localStorage.setItem("data", JSON.stringify(Last));
+    setVideoCards1(Last);
+  };
+  
+    MyAsyncFun();
+
+ 
+    setIsLoading(false);
+
+},[PlayListId])
   return (
     <div className="recommendedvideos">
       <div className="recommendedvideos__videos">
@@ -123,7 +169,7 @@ function RecommendedVideos() {
               <Link
                 key={Math.random()}
                 style={{ color: "unset", textDecoration: "none" }}
-                to={`/watch/${item.videoId}`}
+                to={`/watch/${PlayListId}/${item.videoId}`}
               >
                 <VideoCard
                   title={item.title}
