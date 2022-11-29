@@ -7,10 +7,12 @@
     height: 120px;
     width: 200px;
     border-radius: 4px;
+    -webkit-text-stroke: green;
 }
 
 .videocard__info {
     display: flex;
+ 
     margin-top: 7px;
     padding-right: 30px;
 }

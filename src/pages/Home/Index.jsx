@@ -24,26 +24,30 @@ import VideoTexts from "../../VideoTexts.jsx/VideoTexts";
 function Index() {
   
   return (
-    <>
-    <Navbar/>
-      <div className="all777">
-        <div className="back777">
+    <div>
+  
+      
+        <div className="back777"> 
+         <Navbar/>
+         <div className="myclass3">
            <video   className="video777" autoPlay muted loop>
             <source src={video} type="video/mp4"></source>
-          </video>
-        </div>{" "}
-        <div className="back777">
-           <video   className="video777" autoPlay muted loop>
-            <source src={video} type="video/mp4"></source>
-          </video>
-        </div>
-        <p className="Main777">Your favorite medical media environment</p>
+          </video></div>
+<div className="top">
+
+
+  <p className="Main777">Your favorite medical media environment</p>
         <p className="Main7777">
           Providing comprehensive and professional wellness videos in a safe
           community.
         </p>
         <button className="btn777">Get Started</button>
+
+
+        </div>{" "}
+     
       </div>
+    
       <div className="backgroundstatic">
            <VideoCards TxtAlign={"center"}/> 
       </div>
@@ -51,7 +55,7 @@ function Index() {
       <VideoTexts />
       <Video />
     
-    </>
+    </div>
   );
 }
 

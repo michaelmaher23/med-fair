@@ -198,7 +198,7 @@ function Navbar() {
           <SideNav />
         </div>
       </header>{" "}
-      <div className={`${show2 ? "container" : "container1"}`}>
+      <div className={`${show2 ? "container5555" : "container1"}`}>
         <div className="container2">
           <FontAwesomeIcon
             icon={faClose}
@@ -211,27 +211,27 @@ function Navbar() {
               top: "2rem",
             }}
           />
-          <form style={{ width: "100%" }}>
-            <div className="row">
+          <form style={{ width: "100%" ,height:"100%"}}>
+            <div className="row87">
               <h2 style={{ textAlign: "center" }} className="welcome7">
                 welcome
               </h2>
               <div className="vl">
                 <span className="vl-innertext">or</span>
               </div>
-              <div className="col">
-                <a href="#" className="fb btn">
+              <div className="col87">
+                <a href="#" className="fb btn87">
                   <FontAwesomeIcon className="socialicon13" icon={faFacebook} />
                   Login with Facebook
                 </a>
 
-                <a href="#" className="google btn">
+                <a href="#" className="google btn87">
                   {" "}
                   <FontAwesomeIcon className="socialicon13" icon={faYoutube} />
                   Login with Google+
                 </a>
               </div>
-              <div className="col">
+              <div className="col87">
                 <hr className="hr7" />
                 <input
                   className="input555"
@@ -278,51 +278,53 @@ function Navbar() {
               top: "2rem",
             }}
           />
-          <form>
-            <div className="row">
+        <form style={{ width: "100%" ,height:"100%"}}>
+            <div className="row87">
               <h2 style={{ textAlign: "center" }} className="welcome7">
                 welcome
               </h2>
               <div className="vl">
                 <span className="vl-innertext">or</span>
               </div>
-              <div className="col">
-                <a href="#" className="fb btn">
+              <div className="col87">
+                <a href="#" className="fb btn87">
                   <FontAwesomeIcon className="socialicon13" icon={faFacebook} />
                   Login with Facebook
                 </a>
 
-                <a href="#" className="google btn">
+                <a href="#" className="google btn87">
                   {" "}
                   <FontAwesomeIcon className="socialicon13" icon={faYoutube} />
                   Login with Google+
                 </a>
               </div>
-              <div className="col">
+              <div className="col87">
                 <hr className="hr7" />
                 <input
+                  className="input555"
                   type="text"
                   name="username"
                   placeholder="Username"
                   required
                 />
                 <input
+                  className="input555"
                   type="password"
                   name="password"
                   placeholder="Password"
                   required
                 />
-                <input type="submit" value="Login" />
+                <input className="btn87" type="submit" value="Login" />
               </div>
             </div>
           </form>
           <div className="bottom-container">
-            <div className="col7">
+            <div className="col87">
               <a className="sp7" href="">
                 Sign up
               </a>
             </div>
-            <div className="col7">
+            <div className="col87">
               <a className="sp7" href="">
                 Forgot password?
               </a>
