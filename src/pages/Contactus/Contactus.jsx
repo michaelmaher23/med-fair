@@ -31,6 +31,105 @@ function Contactus() {
       <strong>Michael Strong</strong>
       <b>Michael B</b>
       <p>Michael P</p> 
+      <h1 className="font1">Michael H1</h1>
+      <h2 className="font1"  >Michael H2</h2>
+      <h3 className="font1"  >Michael H3</h3>
+      <h4 className="font1"  >Michael H4</h4>
+      <h5 className="font1"  >Michael H5</h5>
+      <h6 className="font1"  >Michael H6</h6>
+      <span  className="font1" >Michael Span</span>
+      <input className="font1"   value="Michael Input"/>
+      <strong  className="font1"  >Michael Strong</strong>
+      <b  className="font1"  >Michael B</b>
+      <p className="font2"   >Michael P</p> 
+      <h1 className="font2">Michael H1</h1>
+      <h2 className="font2"  >Michael H2</h2>
+      <h3 className="font2"  >Michael H3</h3>
+      <h4 className="font2"  >Michael H4</h4>
+      <h5 className="font2"  >Michael H5</h5>
+      <h6 className="font2"  >Michael H6</h6>
+      <span  className="font2" >Michael Span</span>
+      <input className="font2"   value="Michael Input"/>
+      <strong  className="font2"  >Michael Strong</strong>
+      <b  className="font2"  >Michael B</b>
+      <p className="font2"   >Michael P</p> 
+      <h1 className="font3">Michael H1</h1>
+      <h2 className="font3"  >Michael H2</h2>
+      <h3 className="font3"  >Michael H3</h3>
+      <h4 className="font3"  >Michael H4</h4>
+      <h5 className="font3"  >Michael H5</h5>
+      <h6 className="font3"  >Michael H6</h6>
+      <span  className="font3" >Michael Span</span>
+      <input className="font3"   value="Michael Input"/>
+      <strong  className="font3"  >Michael Strong</strong>
+      <b  className="font3"  >Michael B</b>
+      <p className="font3"   >Michael P</p> 
+      <h1 className="font4">Michael H1</h1>
+      <h2 className="font4"  >Michael H2</h2>
+      <h3 className="font4"  >Michael H3</h3>
+      <h4 className="font4"  >Michael H4</h4>
+      <h5 className="font4"  >Michael H5</h5>
+      <h6 className="font4"  >Michael H6</h6>
+      <span  className="font4" >Michael Span</span>
+      <input className="font4"   value="Michael Input"/>
+      <strong  className="font4"  >Michael Strong</strong>
+      <b  className="font4"  >Michael B</b>
+      <p className="font4"   >Michael P</p> 
+      <h1 className="font5">Michael H1</h1>
+      <h2 className="font5"  >Michael H2</h2>
+      <h3 className="font5"  >Michael H3</h3>
+      <h4 className="font5"  >Michael H4</h4>
+      <h5 className="font5"  >Michael H5</h5>
+      <h6 className="font5"  >Michael H6</h6>
+      <span  className="font5" >Michael Span</span>
+      <input className="font5"   value="Michael Input"/>
+      <strong  className="font5"  >Michael Strong</strong>
+      <b  className="font5"  >Michael B</b>
+      <p className="font5"   >Michael P</p> 
+      <h1 className="font6">Michael H1</h1>
+      <h2 className="font6"  >Michael H2</h2>
+      <h3 className="font6"  >Michael H3</h3>
+      <h4 className="font6"  >Michael H4</h4>
+      <h5 className="font6"  >Michael H5</h5>
+      <h6 className="font6"  >Michael H6</h6>
+      <span  className="font6" >Michael Span</span>
+      <input className="font6"   value="Michael Input"/>
+      <strong  className="font6"  >Michael Strong</strong>
+      <b  className="font6"  >Michael B</b>
+      <p className="font6"   >Michael P</p> 
+      <h1 className="font7">Michael H1</h1>
+      <h2 className="font7"  >Michael H2</h2>
+      <h3 className="font7"  >Michael H3</h3>
+      <h4 className="font7"  >Michael H4</h4>
+      <h5 className="font7"  >Michael H5</h5>
+      <h6 className="font7"  >Michael H6</h6>
+      <span  className="font7" >Michael Span</span>
+      <input className="font7"   value="Michael Input"/>
+      <strong  className="font7"  >Michael Strong</strong>
+      <b  className="font7"  >Michael B</b>
+      <p className="font7"   >Michael P</p> 
+      <h1 className="font8">Michael H1</h1>
+      <h2 className="font8"  >Michael H2</h2>
+      <h3 className="font8"  >Michael H3</h3>
+      <h4 className="font8"  >Michael H4</h4>
+      <h5 className="font8"  >Michael H5</h5>
+      <h6 className="font8"  >Michael H6</h6>
+      <span  className="font8" >Michael Span</span>
+      <input className="font8"   value="Michael Input"/>
+      <strong  className="font8"  >Michael Strong</strong>
+      <b  className="font8"  >Michael B</b>
+      <p className="font8"   >Michael P</p> 
+      <h1 className="font9">Michael H1</h1>
+      <h2 className="font9"  >Michael H2</h2>
+      <h3 className="font9"  >Michael H3</h3>
+      <h4 className="font9"  >Michael H4</h4>
+      <h5 className="font9"  >Michael H5</h5>
+      <h6 className="font9"  >Michael H6</h6>
+      <span  className="font9" >Michael Span</span>
+      <input className="font9"   value="Michael Input"/>
+      <strong  className="font9"  >Michael Strong</strong>
+      <b  className="font9"  >Michael B</b>
+      <p className="font9"   >Michael P</p> 
       <div style={{marginBottom:"20rem"}}></div>
       <Slider />
 
