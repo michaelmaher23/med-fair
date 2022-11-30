@@ -36,11 +36,11 @@ function Index() {
 <div className="top">
 
 
-  <p className="Main777">Your favorite medical media environment</p>
-        <p className="Main7777">
+  <h1 className="Main777">Your favorite medical media environment</h1>
+        <h3 className="Main7777">
           Providing comprehensive and professional wellness videos in a safe
           community.
-        </p>
+        </h3>
         <button className="btn777">Get Started</button>
 
 
