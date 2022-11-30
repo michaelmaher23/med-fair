@@ -39,44 +39,44 @@ h1{
    }
    @media  (max-width:660px) {
       h1{
-          font-size: 21px;
+          font-size: 19px;
            }
            h2{
-              font-size: 19px;
-           }
-           h3{
-              font-size: 18px;
-           }
-           h4{
               font-size: 17px;
            }
-           h5{
+           h3{
               font-size: 16px;
            }
-           h6{
+           h4{
               font-size: 15px;
            }
-           p,li,a{
+           h5{
               font-size: 14px;
            }
+           h6{
+              font-size: 13px;
+           }
+           p,li,a{
+              font-size: 13px;
+           }
            span{
-              font-size: 14px;
+              font-size: 13px;
            }
            input{
               font-size: 14px;
            }
            button{
-              font-size: 14px;
+              font-size: 13px;
            }
            
            strong{
-              font-size: 14px;
+              font-size: 12px;
            }
            b{
-              font-size: 14px;
+              font-size: 12px;
            }
            small{
-            font-size: 12px;
+            font-size: 10px;
            }
    }
     :root {
