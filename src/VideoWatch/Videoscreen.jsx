@@ -128,29 +128,29 @@ useEffect(() => {
   }
   const navigate = useNavigate();
   useEffect(() => {
-    setIsLoading(true);
+    setGIF(true);
     const data = JSON.parse(localStorage.getItem("data"));
     const shuflled = shuffleArray(data);
     setVideoCards1(shuflled); 
-    const body = document.querySelector("#root");
-    body.scrollIntoView();
-    setIsLoading(false)
-    setTimeout(() => {
-     setGIF(false)
-    },900);
+   setTimeout(() => {
+       setGIF(false)
+   }, 400);
+   
+
+   
+ 
   
-  
+
  
    
   }, [videoId]);
   useEffect(() => {
-    setIsLoading(true);
+  
+    setGIF(true);
     let Nosavedwatch =
       !localStorage.getItem("data") ||
       JSON.parse(localStorage.getItem("data"))?.length == 0;
-    const body = document.querySelector("#root");
-    body.scrollIntoView({}, 200);
-    console.log(PlayListId);
+ 
     const MyAsyncFun = async () => {
       const PlayList1 = await getVideosFromYotube(
         "50",
@@ -170,10 +170,12 @@ useEffect(() => {
 
     MyAsyncFun();
 
-    setIsLoading(false)
+  
+
     setTimeout(() => {
-     setGIF(false)
-    },900);
+      setGIF(false)
+  }, 400);
+  
 
    
   }, [PlayListId]);
@@ -258,8 +260,8 @@ const [gif,setGIF]=useState(true);
           className="myvideo2"
           src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
           allow='autoplay'
-         
-          allowFullScreen
+       
+           
         ></iframe>
         <div className="videoplayer__videoinfo">
         

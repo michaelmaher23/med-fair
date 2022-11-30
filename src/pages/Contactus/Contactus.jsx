@@ -20,6 +20,18 @@ import MD3 from './MD3.svg'
 function Contactus() {
   return (
     <div>
+      <h1>Michael H1</h1>
+      <h2>Michael H2</h2>
+      <h3>Michael H3</h3>
+      <h4>Michael H4</h4>
+      <h5>Michael H5</h5>
+      <h6>Michael H6</h6>
+      <span>Michael Span</span>
+      <input value="Michael Input"/>
+      <strong>Michael Strong</strong>
+      <b>Michael B</b>
+      <p>Michael P</p> 
+      <div style={{marginBottom:"20rem"}}></div>
       <Slider />
 
       <div className="MainCont07">

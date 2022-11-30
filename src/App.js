@@ -1,4 +1,5 @@
 import Index from "./pages/Home/Index.jsx";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Contactus from "./pages/Contactus/Contactus.jsx";
@@ -19,7 +20,7 @@ function App() {
           <Route path="/" element={<Index />} />
           <Route path="/contact" element={<Contactus />} />
           <Route path="/about" element={<Aboutus />} />
-          <Route path="/watch/:PlayListId/:videoId" element={<Watch />} />
+          <Route      path="/watch/:PlayListId/:videoId" element={<Watch />} />
           <Route path="/watch/:PlayListId" element={<Watch />} />
         </Routes>
         <Footer /> 

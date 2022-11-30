@@ -15,6 +15,7 @@ function RecommendedVideos({videoCards1,isLoading}) {
           videoCards1.map((item) => {
             return (
               <Link
+              reloadDocument={true}
                 key={Math.random()}
                 style={{ color: "unset", textDecoration: "none" }}
                 to={`/watch/${PlayListId}/${item.videoId}`}

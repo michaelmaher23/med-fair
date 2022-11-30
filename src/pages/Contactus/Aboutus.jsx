@@ -1,5 +1,5 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+ 
 import about from "./img/about.jpg";
 import ppp from "./img/ppp.webp";
 import "./templatemo-edu-meeting.css";

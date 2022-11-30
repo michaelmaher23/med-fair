@@ -7,7 +7,7 @@
     height: 120px;
     width: 200px;
     border-radius: 4px;
-    -webkit-text-stroke: green;
+
 }
 
 .videocard__info {
@@ -22,14 +22,14 @@
 }
 
 .videocard__text > h4 {
-    font-size: 14px;
+   
     font-weight: 500;
     margin-bottom: 0px;
     font-family: "El Messiri", sans-serif;
 }
 
 .videocard__text > p {
-    font-size: 14px;
+    
     color: rgb(110, 108, 108);
     font-family: "El Messiri", sans-serif;
 }
@@ -45,7 +45,7 @@
 .videocard__text > * {
     margin: 1px;
 }
-@media screen and (max-width:500px) {
+@media  (max-width:500px) {
     .videocard {
         width:90%;
         margin-left: 1rem;
