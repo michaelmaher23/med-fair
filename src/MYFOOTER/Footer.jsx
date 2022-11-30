@@ -22,7 +22,7 @@ function Footer() {
       <div className="row29 primary29">
         <div className="column29 about29">
           <h3 className="h329">Medical Media</h3>
-          <p className="p29">
+          <p >
             Providing comprehensive and professional wellness videos in a safe
             community, Discover with us another levels of innovations.
           </p>
@@ -34,7 +34,7 @@ function Footer() {
             <div>
               <FontAwesomeIcon icon={faWhatsapp} />
               <span> Whatsapp </span>
-              <p className="p29">+323 4554 7676</p>
+              <p  >+323 4554 7676</p>
             </div>
           </div>
         </div>

@@ -259,12 +259,9 @@ const [gif,setGIF]=useState(true);
         <iframe
           className="myvideo2"
           src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-          allow='autoplay'
-       
-           
+          allow='autoplay' 
         ></iframe>
         <div className="videoplayer__videoinfo">
-        
             <VideoInfo
               title={videoInfo.title}
               description={videoInfo.description}

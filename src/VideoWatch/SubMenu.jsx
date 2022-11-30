@@ -36,6 +36,7 @@ const DropdownLink = styled(Link)`
     background: #632ce4;
     cursor: pointer;
   }
+  
 `;
 
 const SubMenu = ({ item }) => {
@@ -44,7 +45,7 @@ const SubMenu = ({ item }) => {
   const showSubnav = () => setSubnav(!subnav);
 
   return (
-    <>
+    <div>
       <SidebarLink to={item.path} onClick={item.subNav && showSubnav}>
         <div>
           {item.icon}
@@ -67,7 +68,7 @@ const SubMenu = ({ item }) => {
             </DropdownLink>
           );
         })}
-    </>
+    </div>
   );
 };
 

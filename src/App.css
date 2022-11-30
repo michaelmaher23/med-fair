@@ -16,7 +16,7 @@ h1{
    h6{
       font-size: 18px;
    }
-   p{
+   p,li,a{
       font-size:16px;
    }
    span{
@@ -56,7 +56,7 @@ h1{
            h6{
               font-size: 15px;
            }
-           p{
+           p,li,a{
               font-size: 14px;
            }
            span{
