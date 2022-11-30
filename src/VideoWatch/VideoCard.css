@@ -21,14 +21,14 @@
     margin-left: 13px;
 }
 
-.videocard__text > h4 {
+.MYH4 {
    
     font-weight: 500;
     margin-bottom: 0px;
     font-family: "El Messiri", sans-serif;
 }
 
-.videocard__text > p {
+.MYSMALL {
     
     color: rgb(110, 108, 108);
     font-family: "El Messiri", sans-serif;
