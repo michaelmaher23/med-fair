@@ -20,11 +20,13 @@ class A{
      a.setAttribute("class", "select-selected");
      a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
      x[i].appendChild(a);
-     if (window.location.pathname.startsWith('/watch'))
+     if (window.location.pathname=="/")
       {
-    
-    
-    a?.classList?.add('myclass')}
+  
+  
+  }else{
+      a?.classList?.add('myclass')
+  }
       b = document.createElement("DIV");
      b.setAttribute("class", "select-items select-hide");
      for (j = 0; j < ll; j++) {

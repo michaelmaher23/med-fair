@@ -11,6 +11,7 @@ import {
   faYoutube,
   faYoutubeSquare,
 } from "@fortawesome/free-brands-svg-icons";
+import a from './script.js'
 import { useEffect } from "react";
 import { redirect, useLocation, useParams } from "react-router-dom";
 import Logo from './Logo.svg'
@@ -18,10 +19,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import Footer from "../../MYFOOTER/Footer";
 import SideNav from "../../MysideNav/SideNav";
-import Video from "../../Video/Video";
-import VideoTexts from "../../VideoTexts.jsx/VideoTexts";
-import VideoComponent from "../../VideoTexts.jsx/VideoComponent";
-function Navbar() { 
+ function Navbar() { 
    const languages = [
     { value: 'en', text: `English` },
     { value: 'Ar', text: "العربية" },
@@ -56,7 +54,22 @@ function Navbar() {
 
 
   useEffect(() => {
-    if (location.pathname == `/watch/${PlayListId}/${videoId}`) {
+  
+
+    if (location.pathname ==`/watch/${PlayListId}/${videoId}`  ) {
+      let navbar=document.getElementsByClassName("navbar777")[0]
+      let s=document.getElementById('myselect')
+      navbar.style.backgroundColor="transparent"
+     let list1= document.getElementsByClassName("lnk33")
+      for(let i=0 ;i<list1.length;i++)
+      {
+        list1[i].classList.add("myclass")
+      }
+s.classList.add('myclass')}
+     else if(location.pathname=="/"){
+
+     }
+     else{
       let navbar=document.getElementsByClassName("navbar777")[0]
       let s=document.getElementById('myselect')
       navbar.style.backgroundColor="transparent"
@@ -66,34 +79,33 @@ function Navbar() {
         list1[i].classList.add("myclass")
       }
 s.classList.add('myclass')
-     } else if (location.pathname=="/contact") {
-      let navbar=document.getElementsByClassName("navbar777")[0]
-      navbar.style.background="linear-gradient(#2e2e2eb0,rgb(0,0,0,.6), rgb(0,0,0,.3),transparent)"
-  
-      let list= document.getElementsByClassName("lnk33")
-      for(let i=0 ;i<list.length;i++)
-      {
-        list[i].classList.add("myclass2")
-      }
-
-     } else{
-
      }
   
-      const script = document.createElement('script');
+    
+      var scripts = document.getElementsByTagName("script");
+      let ok=0;
+  
+    
+  
+   if(a.s!=="no"){
+a.s="no"
+   a.fn()
+   }
+  
+   
 
- 
-     script.src = "/script5.js";
-     script.type='text/javascript'
-     script.async = true;
-     document.body.appendChild(script);
+  
+  
+  
  
      const query = new URLSearchParams(location.search);
      const lng = query.get('lng')
      console.log(lng)
      setLang(lng)
- 
-  },[]);
+ return ()=>setTimeout(() => {
+  a.s="yes"
+ }, 100); 
+  },[location.pathname]);
 
 
   
@@ -118,8 +130,8 @@ s.classList.add('myclass')
             <FontAwesomeIcon icon={faClose} onClick={(e) => SetShow(!show)} />
           </div>
         </div>
-        <div style={{ display: show ? "flex" : "none" }} className="nav777">
-          <Link to={"/"}  className="lnk33">
+        <div style={{ display: show ? "flex" : "none",flexDirection:lang=="Ar"?'row-reverse':'row' }} className="nav777">
+          <Link to={`/?lng=en`}  className="lnk33">
             <span    className="underline"   >
               <div className="inner"></div>
               {lang=="en"?"Home":"الرئيسية"}

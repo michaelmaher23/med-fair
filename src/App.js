@@ -9,8 +9,8 @@ import Aboutus from "./pages/Contactus/Aboutus.jsx";
 import SideBox from "./VideoTexts.jsx/SideBox.jsx";
 import Watch from "./VideoWatch/Watch.jsx";
 import "./App.css";
+import PageNotFound from "./pages/PageNotFound.jsx";
  
-import { useEffect } from "react";
 function App() {
 
 
@@ -29,6 +29,7 @@ function App() {
           <Route path="/about" element={<Aboutus />} />
           <Route      path="/watch/:PlayListId/:videoId" element={<Watch />} />
           <Route path="/watch/:PlayListId" element={<Watch />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer /> 
          </div>
