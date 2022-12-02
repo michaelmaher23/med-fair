@@ -17,6 +17,7 @@ import FormInquiry2 from "./FormInqiry2";
 import FormInquiry from "./FormInquiry";
 import med from './med.svg'
 import MD3 from './MD3.svg'
+
 function Contactus() {
   return (
     <div>
@@ -31,6 +32,9 @@ function Contactus() {
       <strong>Michael Strong</strong>
       <b>Michael B</b>
       <p>Michael P</p> 
+
+
+
       <h1 className="font1">Michael H1</h1>
       <h2 className="font1"  >Michael H2</h2>
       <h3 className="font1"  >Michael H3</h3>
@@ -129,7 +133,8 @@ function Contactus() {
       <input className="font9"   value="Michael Input"/>
       <strong  className="font9"  >Michael Strong</strong>
       <b  className="font9"  >Michael B</b>
-      <p className="font9"   >Michael P</p> 
+      <p className="font9"   >Michael P</p>    
+
       <div style={{marginBottom:"20rem"}}></div>
       <Slider />
 

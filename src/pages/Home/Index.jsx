@@ -12,7 +12,7 @@ import {
   faYoutubeSquare,
 } from "@fortawesome/free-brands-svg-icons";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import Footer from "../../MYFOOTER/Footer";
 import VideoCard from "../../VideoCards/VideoCard";
@@ -22,7 +22,16 @@ import Video from "../../Video/Video";
 import Navbar from "./Navbar"
 import VideoTexts from "../../VideoTexts.jsx/VideoTexts";
 function Index() {
-  
+  const location = useLocation();
+const [l ,setL]=useState('en')
+  useEffect(() => {
+ 
+     const query = new URLSearchParams(location.search);
+     const lng = query.get('lng')
+     console.log(lng)
+     setL(lng)
+
+  },[]);
   return (
     <div>
   
@@ -36,12 +45,16 @@ function Index() {
 <div className="top">
 
 
-  <h1 className="Main777">Your favorite medical media environment</h1>
+  <h1 className="Main777">{l=='en'?`Your favorite medical media environment`:`  منصتك العربية المفضلة للميديا الطبية من كل انحاء العالم `}</h1>
         <h3 className="Main7777">
-          Providing comprehensive and professional wellness videos in a safe
-          community.
+
+        {l=='en'?`Providing comprehensive and professional wellness videos in a safe
+          community.`:`نسعي باستمرار لتوفير محتوي بجودة تليق بمستوي الطبيب العربي لاجل شفاء اسرع لمن يعانون  `}
+
+        
         </h3>
-        <button className="btn777">Get Started</button>
+        <button className="btn777"> {l=='en'?`GET STARTED`:`اريد الانضمام الان `}
+</button>
 
 
         </div>{" "}

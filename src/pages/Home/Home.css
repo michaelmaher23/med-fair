@@ -102,7 +102,7 @@ margin-left: 1rem;
 }
 .nav777 {
   display: flex;
-  width: 40%;
+  
   gap: 1.4rem;
  
 
@@ -121,8 +121,9 @@ margin-left: 1rem;
  display: block;
  cursor: pointer;
  font-size: 19px;
-
-  
+ 
+ width: max-content;
+    
 }
   .inner {
     display: block;
@@ -141,6 +142,8 @@ margin-left: 1rem;
   background :linear-gradient(rgba(196, 152, 42, 0.841),rgba(108, 106, 88, 0.653));
   border-radius: 5px;
   box-shadow: .3px 3px 10px gray;
+ 
+
 }
 .myclass2{
   padding: 3px 5px 1px 5px ;
@@ -150,6 +153,11 @@ margin-left: 1rem;
 }
 .underline:hover .inner {
   width: 103%;
+ }
+ .BACK555{
+  padding: 3px 5px 1px 5px ;
+  background-image :linear-gradient(rgba(196, 152, 42, 0.621),rgba(108, 106, 88, 0.653));
+
  }
  
 
@@ -538,7 +546,7 @@ input[type="submit"]:hover {
   display: block;
   text-align: center;
 }
-@media (max-width: 720px) {
+@media (max-width: 800px) {
  
   .Main777 {
     font-family: "El Messiri", sans-serif;

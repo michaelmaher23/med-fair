@@ -9,7 +9,13 @@ import Aboutus from "./pages/Contactus/Aboutus.jsx";
 import SideBox from "./VideoTexts.jsx/SideBox.jsx";
 import Watch from "./VideoWatch/Watch.jsx";
 import "./App.css";
+ 
+import { useEffect } from "react";
 function App() {
+
+
+
+
   return (
     < >
       <BrowserRouter >
