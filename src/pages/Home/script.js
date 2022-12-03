@@ -39,7 +39,7 @@ c.name=selElmnt.options[j].value
               h.innerHTML = this.innerHTML;
            s.value=this.name;
                
-         let loc = "http://localhost:3000";
+         let loc = "https://med-fair.vercel.app";
               window.location.replace(loc + `${window.location.pathname}` + "?lng=" + `${s.value}`);
       
               y = this.parentNode.getElementsByClassName("same-as-selected");
