@@ -31,7 +31,7 @@ function Footer() {
           <div className="social229">
             <div>
               <FontAwesomeIcon icon={faEnvelope} /> <span> Email </span>
-              <p>mikaelmaaher2023@gmail.com</p>
+              <p>mm@gmail.com</p>
             </div>
             <div>
               <FontAwesomeIcon icon={faWhatsapp} />

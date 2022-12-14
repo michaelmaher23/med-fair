@@ -48,8 +48,7 @@ const [l ,setL]=useState('en')
   <h1 className="Main777">{l=='en'?`Your favorite medical media environment`:`  منصتك العربية المفضلة للميديا الطبية من كل انحاء العالم `}</h1>
         <h3 className="Main7777">
 
-        {l=='en'?`Providing comprehensive and professional wellness videos in a safe
-          community.`:`نسعي باستمرار لتوفير محتوي بجودة تليق بمستوي الطبيب العربي لاجل شفاء اسرع لمن يعانون  `}
+        {l=='en'?`Providing comprehensive and professional wellness videos in a safe community.`:`نسعي باستمرار لتوفير محتوي بجودة تليق بمستوي الطبيب العربي لاجل شفاء اسرع لمن يعانون  `}
 
         
         </h3>

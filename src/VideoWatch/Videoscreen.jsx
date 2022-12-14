@@ -136,7 +136,7 @@ useEffect(() => {
        setGIF(false)
    }, 400);
    
-
+window.scroll(0,0)
    
  
   

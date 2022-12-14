@@ -1,0 +1,4 @@
+applications:
+- name: med-fair
+memory: 1024M
+path: .

@@ -3,36 +3,38 @@ import VideoCard from "./VideoCard";
 import "./VideoCard.css";
 import surgeon from "./surgeon.jpg"
 import children from "./children.webp"
+import magdy from "./magdy.jpg"
+import karim from "./karim.jpg"
 import patient from "./patient.jpg"
 import surgeries from "./surgeries.jpg"
 import doctor from "./doctor.jpg"
-
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleInfo, faFileArrowUp, faHeart, faInfo, faTelevision } from "@fortawesome/free-solid-svg-icons";
 function VideoCards(props) {
   return (
 
     <div className="myvideocardscontainer">
- {[...Array(3)].map((i, k) => (
-        <VideoCard  TxtAlign={props.TxtAlign}  key={k}/>
-      ))}
+ 
 
 
    
   <div className="mydiv333">
+  <Link style={{ textDecoration: "none", color: "unset" }} to={"/watch/PL-JsIFvbdUez4_Hl3JujNdRvfRPXqkN8U/bJdiyq4aoAc/?lng=Ar"}>
+
       <div className="cardcontainer29">
         <div className="cardimagecontainer29">
       
         <img
 className="cardimage29"
-src={children}
+src={karim}
 />
-          <span className="cardimagespan29">Europe</span>
+          <span className="cardimagespan29">Egypt</span>
         </div>
         <div className="container222">
           <div className="flexcategrank">
             <div className="categ">
-              <span className="categspan">Guided Surgery</span>
+              <span className="categspan">Dr. Karim ALi</span>
             </div>
       
           </div>
@@ -63,26 +65,27 @@ for your colon surgery ,Surgeons rely on their experience, training, sense of si
           </div> 
         </div>
       </div>
+   </Link>
     </div>
-   
 
 
     <div className="mydiv333">
-    
+    <Link style={{ textDecoration: "none", color: "unset" }} to={"/watch/PLEvv_zCI1w3R0MjAOg0mGzmAqNaRdVueA/L-W52ULmWsE/?lng=Ar"}>
+
       <div className="cardcontainer29">
        <div className="cardimagecontainer29">
       
       <img
       className="cardimage29"
-      src={surgeon}
+      src={magdy}
       />
-                <span className="cardimagespan29">Middle East & North Africa</span>
+                <span className="cardimagespan29">Aswan, Egypt</span>
               </div> 
         
         <div className="container222">
           <div className="flexcategrank">
             <div className="categ">
-              <span className="categspan">Health forward</span>
+              <span className="categspan">Dr . Magdy Yacob</span>
             </div>
       
           </div>
@@ -113,7 +116,7 @@ for your colon surgery ,Surgeons rely on their experience, training, sense of si
 
           </div> 
         </div>
-      </div>
+      </div></Link>
     </div>
     <div className="mydiv333">
       <div className="cardcontainer29">
@@ -220,7 +223,9 @@ src={doctor}
       </div>
     </div>
 
-
+{[...Array(3)].map((i, k) => (
+        <VideoCard  TxtAlign={props.TxtAlign}  key={k}/>
+      ))}
 </div>
 
   );
